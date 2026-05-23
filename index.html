@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfect Gulf Limited | Premium Electromechanical &amp; IT Services</title>
+  <meta name="description" content="Where Innovation Meets Execution. Perfect Gulf Limited (PGL) provides elite industrial, commercial, and data center electromechanical engineering &amp; IT infrastructure services in Dammam, Saudi Arabia.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Home-specific Custom Hero Style */
+    .home-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--dark-gradient-start), var(--dark-gradient-end));
+      overflow: hidden;
+      text-align: center;
+      border-bottom: 5px solid var(--primary-green);
+      padding-top: 80px;
+    }
+    
+    .home-hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0.25;
+      background: 
+        radial-gradient(circle at 10% 20%, rgba(115, 181, 47, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(19, 138, 220, 0.15) 0%, transparent 40%),
+        linear-gradient(rgba(1, 101, 174, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(1, 101, 174, 0.1) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    }
+
+    .home-hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1100px;
+      padding: 0 20px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Banner image — scaled and optimized for perfect above-the-fold display */
+    .hero-banner-img {
+      width: 100%;
+      max-width: 880px;
+      margin: 12px 0 22px 0;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      border: 2px solid rgba(115, 181, 47, 0.4);
+    }
+
+    .hero-banner-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Text and CTA below the banner */
+    .hero-text-block {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .home-hero h1 {
+      color: var(--white);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 800;
+    }
+
+    .home-hero p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      max-width: 750px;
+      margin: 0 auto 25px auto;
+      line-height: 1.5;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Floating glowing elements */
+    .glowing-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: 1;
+      opacity: 0.3;
+    }
+
+    .orb-1 {
+      width: 300px;
+      height: 300px;
+      background-color: var(--primary-green);
+      top: -50px;
+      left: -50px;
+    }
+
+    .orb-2 {
+      width: 400px;
+      height: 400px;
+      background-color: var(--light-blue);
+      bottom: -100px;
+      right: -100px;
+    }
+
+    /* Why Choose Us Style */
+    .wcu-number {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: rgba(19, 138, 220, 0.15);
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-family: var(--font-heading);
+    }
+
+    /* Mini Tile Styling */
+    .mini-tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--light-gray);
+      border: 1px solid var(--border-gray);
+      border-radius: var(--radius-md);
+      padding: 25px 15px;
+      text-align: center;
+      transition: var(--transition-normal);
+      cursor: pointer;
+    }
+
+    .mini-tile:hover {
+      background: var(--white);
+      border-color: var(--light-blue);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .mini-tile i {
+      font-size: 2rem;
+      color: var(--dark-blue);
+      margin-bottom: 12px;
+      transition: var(--transition-normal);
+    }
+
+    .mini-tile:hover i {
+      color: var(--primary-green);
+      transform: scale(1.1);
+    }
+
+    .mini-tile h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--dark-gray);
+      margin: 0;
+    }
+
+    /* Counter Section */
+    .counter-section {
+      background: linear-gradient(135deg, var(--dark-gradient-start), var(--dark-gradient-end));
+      padding: 60px 0;
+      border-top: 4px solid var(--light-blue);
+      border-bottom: 4px solid var(--primary-green);
+    }
+
+    .counter-item {
+      text-align: center;
+      color: var(--white);
+    }
+
+    .counter-item i {
+      font-size: 2.2rem;
+      color: var(--primary-green);
+      margin-bottom: 15px;
+    }
+
+    .counter-item h3 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 5px;
+    }
+
+    .counter-item p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.7);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dynamic Header Navigation Mount -->
+  <div id="header-placeholder"></div>
+
+  <!-- MAIN HERO BANNER -->
+  <section class="home-hero">
+    <div class="home-hero-bg"></div>
+    <div class="glowing-orb orb-1"></div>
+    <div class="glowing-orb orb-2"></div>
+    
+    <div class="home-hero-content reveal fade-in">
+      <!-- PGL BANNER IMAGE — stretched sideways, lifted up -->
+      <div class="hero-banner-img reveal slide-up">
+        <img src="./assets/images/banner.png" alt="Perfect Gulf Limited - Engineering Excellence. Powering Progress.">
+      </div>
+      <!-- TAGLINE & CTA BELOW THE BANNER -->
+      <div class="hero-text-block">
+        <h1>Where Innovation Meets Execution</h1>
+        <p>Elite Electromechanical Engineering, HVAC, Fire Safety, and White-Space Data Center Fit-Outs.</p>
+        <div class="hero-cta">
+          <a href="./contact.html" class="btn btn-primary">Schedule Consultation</a>
+          <a href="./services.html" class="btn btn-outline btn-white">Explore Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS / METRICS COUNTER SECTION (Animated) -->
+  <section class="counter-section">
+    <div class="container grid grid-4">
+      <div class="counter-item reveal slide-up stagger-1">
+        <i class="fas fa-history"></i>
+        <h3 class="stat-number" data-count="15" data-suffix="+">0</h3>
+        <p>Years Group Experience</p>
+      </div>
+      <div class="counter-item reveal slide-up stagger-2">
+        <i class="fas fa-check-circle"></i>
+        <h3 class="stat-number" data-count="120" data-suffix="+">0</h3>
+        <p>Projects Completed</p>
+      </div>
+      <div class="counter-item reveal slide-up stagger-3">
+        <i class="fas fa-smile"></i>
+        <h3 class="stat-number" data-count="98" data-suffix="%">0</h3>
+        <p>Client Satisfaction</p>
+      </div>
+      <div class="counter-item reveal slide-up stagger-4">
+        <i class="fas fa-users-cog"></i>
+        <h3 class="stat-number" data-count="45" data-suffix="+">0</h3>
+        <p>Engineering Experts</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center reveal slide-up" style="margin-bottom: 50px;">
+        <h2 class="center-align">Comprehensive Service Core</h2>
+        <p style="max-width: 650px; margin: 15px auto 0 auto;">PGL specializes in 7 primary engineering and integration segments, delivering robust and certified systems matching global standards.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- 1. Electrical -->
+        <div class="glass-card reveal slide-up stagger-1">
+          <div style="font-size: 2.5rem; color: var(--light-blue); margin-bottom: 20px;"><i class="fas fa-bolt"></i></div>
+          <h3 style="margin-bottom: 12px;">Electrical Engineering</h3>
+          <p>Complete single-line diagrams, substation layouts, MV/LV power systems, and specialized infrastructure wiring matching local Saudi building codes.</p>
+          <a href="./services/electrical.html" style="font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; margin-top: 10px;">
+            Learn More <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 2. HVAC -->
+        <div class="glass-card reveal slide-up stagger-2">
+          <div style="font-size: 2.5rem; color: var(--medium-blue); margin-bottom: 20px;"><i class="fas fa-temperature-high"></i></div>
+          <h3 style="margin-bottom: 12px;">HVAC Solutions</h3>
+          <p>Precision indoor thermal conditioning, heavy commercial duct networks, VRF systems, exhaust fans, and cooling towers optimized for hot climates.</p>
+          <a href="./services/hvac.html" style="font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; margin-top: 10px;">
+            Learn More <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 3. Fire Alarm -->
+        <div class="glass-card reveal slide-up stagger-3">
+          <div style="font-size: 2.5rem; color: #ff3838; margin-bottom: 20px;"><i class="fas fa-bell"></i></div>
+          <h3 style="margin-bottom: 12px;">Fire Protection</h3>
+          <p>NFPA-compliant smoke detection networks, warning panels, automatic sprinklers, clean-agent suppression, and life-safety integration structures.</p>
+          <a href="./services/fire-alarm.html" style="font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; margin-top: 10px;">
+            Learn More <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 4. Low Current -->
+        <div class="glass-card reveal slide-up stagger-1">
+          <div style="font-size: 2.5rem; color: var(--primary-green); margin-bottom: 20px;"><i class="fas fa-network-wired"></i></div>
+          <h3 style="margin-bottom: 12px;">Low Current Systems</h3>
+          <p>Smart building automation (BMS), CCTV cameras, access gates, network structured cabling, public addressing, and modern security matrices.</p>
+          <a href="./services/low-current.html" style="font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; margin-top: 10px;">
+            Learn More <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 5. UPS Backup -->
+        <div class="glass-card reveal slide-up stagger-2">
+          <div style="font-size: 2.5rem; color: #ff9f43; margin-bottom: 20px;"><i class="fas fa-car-battery"></i></div>
+          <h3 style="margin-bottom: 12px;">UPS &amp; Power Backup</h3>
+          <p>Mission-critical power redundancy designs, active generators integration, automated transfer switch (ATS) configurations, and battery arrays maintenance.</p>
+          <a href="./services/ups.html" style="font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; margin-top: 10px;">
+            Learn More <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 6. Data Center -->
+        <div class="glass-card reveal slide-up stagger-3">
+          <div style="font-size: 2.5rem; color: #00d2d3; margin-bottom: 20px;"><i class="fas fa-server"></i></div>
+          <h3 style="margin-bottom: 12px;">Data Center Fit-Out</h3>
+          <p>Comprehensive white space layouts, high-load server containment, cold/hot aisles configurations, raised access flooring, and fiber runways.</p>
+          <a href="./services/data-center.html" style="font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; margin-top: 10px;">
+            Learn More <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 50px;">
+        <a href="./services.html" class="btn btn-outline">View All 7 Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US SECTION -->
+  <section class="section section-bg">
+    <div class="container">
+      <div class="text-center reveal slide-up" style="margin-bottom: 50px;">
+        <h2 class="center-align">Why B2B Partners Trust PGL</h2>
+        <p style="max-width: 650px; margin: 15px auto 0 auto;">PGL coordinates engineering across multiple trades to execute plans smoothly from blueprints through to operational sign-off.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Reason 1 -->
+        <div class="glass-card reveal slide-up stagger-1" style="position: relative; overflow: hidden; background: #fff;">
+          <span class="wcu-number">01</span>
+          <div style="font-size: 2rem; color: var(--primary-green); margin-bottom: 15px;"><i class="fas fa-expand-arrows-alt"></i></div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Future-Ready &amp; Scalable</h3>
+          <p style="font-size: 0.92rem; line-height: 1.5; margin: 0;">We build architectures that easily expand to support your company's long-term physical growth, saving expensive future modifications.</p>
+        </div>
+
+        <!-- Reason 2 -->
+        <div class="glass-card reveal slide-up stagger-2" style="position: relative; overflow: hidden; background: #fff;">
+          <span class="wcu-number">02</span>
+          <div style="font-size: 2rem; color: var(--light-blue); margin-bottom: 15px;"><i class="fas fa-shapes"></i></div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Integrated Expertise</h3>
+          <p style="font-size: 0.92rem; line-height: 1.5; margin: 0;">Complete multi-discipline synchronization. Our HVAC, electrical, and data systems operate together seamlessly without code conflicts.</p>
+        </div>
+
+        <!-- Reason 3 -->
+        <div class="glass-card reveal slide-up stagger-3" style="position: relative; overflow: hidden; background: #fff;">
+          <span class="wcu-number">03</span>
+          <div style="font-size: 2rem; color: var(--dark-blue); margin-bottom: 15px;"><i class="fas fa-tasks"></i></div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 10px;">End-to-End Execution</h3>
+          <p style="font-size: 0.92rem; line-height: 1.5; margin: 0;">We manage the entire cycle. Site evaluation, custom design, authority permit clearance, heavy machinery rigging, testing, and upkeep.</p>
+        </div>
+
+        <!-- Reason 4 -->
+        <div class="glass-card reveal slide-up stagger-1" style="position: relative; overflow: hidden; background: #fff;">
+          <span class="wcu-number">04</span>
+          <div style="font-size: 2rem; color: #ff9f43; margin-bottom: 15px;"><i class="fas fa-award"></i></div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Certified Professionals</h3>
+          <p style="font-size: 0.92rem; line-height: 1.5; margin: 0;">All installation crew are heavily certified. PGL adheres fully to NFPA fire regulations, IEEE specifications, and Saudi Building Codes.</p>
+        </div>
+
+        <!-- Reason 5 -->
+        <div class="glass-card reveal slide-up stagger-2" style="position: relative; overflow: hidden; background: #fff;">
+          <span class="wcu-number">05</span>
+          <div style="font-size: 2rem; color: #00d2d3; margin-bottom: 15px;"><i class="fas fa-drafting-compass"></i></div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 10px;">Design Meets Standards</h3>
+          <p style="font-size: 0.92rem; line-height: 1.5; margin: 0;">Our blueprint drafting follows global conventions, simplifying structural checks and getting direct validation from municipality regulators.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES SERVE PREVIEW -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center reveal slide-up" style="margin-bottom: 50px;">
+        <h2 class="center-align">Industries We Serve</h2>
+        <p style="max-width: 650px; margin: 15px auto 0 auto;">PGL adapts services to meet rigorous standards across distinct, demanding market sectors.</p>
+      </div>
+
+      <div class="grid grid-6">
+        <div class="mini-tile reveal slide-up stagger-1">
+          <i class="fas fa-industry"></i>
+          <h4>Industrial Plants</h4>
+        </div>
+        <div class="mini-tile reveal slide-up stagger-2">
+          <i class="fas fa-server"></i>
+          <h4>Data Centers</h4>
+        </div>
+        <div class="mini-tile reveal slide-up stagger-3">
+          <i class="fas fa-hospital"></i>
+          <h4>Healthcare Facilities</h4>
+        </div>
+        <div class="mini-tile reveal slide-up stagger-4">
+          <i class="fas fa-hotel"></i>
+          <h4>Commercial Sites</h4>
+        </div>
+        <div class="mini-tile reveal slide-up stagger-5">
+          <i class="fas fa-charging-station"></i>
+          <h4>EV Networks</h4>
+        </div>
+        <div class="mini-tile reveal slide-up stagger-6">
+          <i class="fas fa-solar-panel"></i>
+          <h4>Solar Farms</h4>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 40px;">
+        <a href="./industries.html" class="btn btn-outline">Explore All 10 Sectors</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT TESTIMONIAL CARD -->
+  <section class="section section-bg">
+    <div class="container">
+      <div class="text-center reveal slide-up" style="margin-bottom: 50px;">
+        <h2 class="center-align">B2B Endorsements</h2>
+      </div>
+
+      <div class="reveal scale-up" style="max-width: 800px; margin: 0 auto;">
+        <div class="glass-card" style="border-left: 6px solid var(--dark-blue); background-color: var(--white); position: relative; padding: 40px;">
+          <div style="position: absolute; top: 20px; right: 30px; font-size: 4rem; color: rgba(1, 101, 174, 0.05); font-family: Georgia, serif;"><i class="fas fa-quote-right"></i></div>
+          <div style="display: flex; gap: 5px; color: #ffc107; font-size: 1.1rem; margin-bottom: 20px;">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p style="font-size: 1.15rem; line-height: 1.7; color: var(--dark-gray); font-style: italic; margin-bottom: 25px;">
+            "We were thoroughly impressed by the professionalism and efficiency shown by Perfect Gulf Limited during our operations. Their team, coordinated by Mr. Amjad Syed, managed our requirements with deep care, delivering our installation exactly as requested and compliant with KSA standards."
+          </p>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(135deg, var(--light-blue), var(--primary-green)); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem;">
+              K
+            </div>
+            <div>
+              <h4 style="font-size: 1.05rem; margin-bottom: 2px;">Krystalite GT Inc.</h4>
+              <p style="font-size: 0.85rem; color: var(--light-text); margin: 0;">Operations Directorate, KSA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA ACTION SECTION -->
+  <section class="section text-white" style="background: linear-gradient(135deg, var(--dark-blue), var(--medium-blue)); position: relative; overflow: hidden; border-top: 4px solid var(--primary-green);">
+    <div class="home-hero-bg" style="opacity: 0.15;"></div>
+    <div class="container text-center reveal slide-up" style="position: relative; z-index: 2; max-width: 800px;">
+      <h2 class="text-white center-align" style="margin-bottom: 15px;">Ready to Transform Your Infrastructure?</h2>
+      <p style="color: rgba(255,255,255,0.85); font-size: 1.15rem; margin-bottom: 35px;">Let's consult, design, and construct your next electromechanical project. Our team is available 9 AM to 6 PM across KSA.</p>
+      <div class="flex flex-center" style="gap: 15px; flex-wrap: wrap;">
+        <a href="./contact.html" class="btn btn-secondary">Get In Touch Today</a>
+        <a href="https://wa.me/966563151891" target="_blank" class="btn btn-outline btn-white flex-center" style="gap: 8px; color: #25d366; border-color: #25d366;">
+          <i class="fab fa-whatsapp"></i> Chat Live on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Mount -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JS Scripts -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

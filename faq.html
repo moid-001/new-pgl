@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions | Perfect Gulf Limited</title>
+  <meta name="description" content="Find answers to common B2B electromechanical engineering, HVAC systems, data center white space, permit approvals, pricing, and project timelines questions.">
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Premium details/summary accordion CSS */
+    .faq-category-title {
+      font-size: 1.4rem;
+      color: var(--dark-blue);
+      margin-bottom: 20px;
+      margin-top: 40px;
+      border-bottom: 2px solid var(--primary-green);
+      padding-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .faq-category-title i {
+      color: var(--primary-green);
+    }
+
+    details {
+      background: var(--white);
+      border: 1px solid var(--border-gray);
+      border-radius: var(--radius-md);
+      margin-bottom: 15px;
+      overflow: hidden;
+      transition: var(--transition-normal);
+    }
+
+    details[open] {
+      border-color: var(--light-blue);
+      box-shadow: var(--shadow-sm);
+    }
+
+    summary {
+      padding: 18px 24px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      outline: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: '+';
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--light-blue);
+      transition: transform 0.3s ease;
+    }
+
+    details[open] summary::after {
+      content: '−';
+      transform: rotate(180deg);
+      color: var(--primary-green);
+    }
+
+    .faq-content {
+      padding: 0 24px 20px 24px;
+      color: var(--light-text);
+      font-size: 0.94rem;
+      line-height: 1.6;
+      border-top: 1px solid var(--border-gray);
+      padding-top: 15px;
+      background: var(--light-gray);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dynamic Header Navigation Mount -->
+  <div id="header-placeholder"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-content reveal fade-in">
+      <div class="breadcrumbs">
+        <a href="./index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">FAQ</span>
+      </div>
+      <h1 style="margin-top: 10px;">Frequently Asked Questions</h1>
+      <p>Have questions about permits, engineering schedules, HVAC load flows, or data center fits? Explore our answers.</p>
+    </div>
+  </section>
+
+  <!-- COLLAPSIBLE ACCORDIONS CONTAINER -->
+  <section class="section">
+    <div class="container" style="max-width: 900px;">
+      
+      <!-- Category A: General -->
+      <h2 class="faq-category-title reveal slide-up"><i class="fas fa-info-circle"></i> A. General Service Questions</h2>
+      
+      <details class="reveal slide-up stagger-1">
+        <summary>What services does Perfect Gulf Limited offer?</summary>
+        <div class="faq-content">
+          We provide 7 core engineering services across Saudi Arabia: Electrical engineering layouts, commercial HVAC climate systems, NFPA-certified Fire Protection sprinklers, Low Current building automation (BMS), UPS backup power redundancy, White Space data center setups, and commercial Plumbing/Drainage grids.
+        </div>
+      </details>
+
+      <details class="reveal slide-up stagger-2">
+        <summary>Which industries do you serve?</summary>
+        <div class="faq-content">
+          PGL serves 10 core industrial sectors: Manufacturing factories, institutional/commercial offices, T3/T4 Data Centers, EV networks, solar renewable farms, healthcare medical facilities, smart residential complexes, temporary mobile setups, logistic warehouses, and municipality/government complexes.
+        </div>
+      </details>
+
+      <details class="reveal slide-up stagger-3">
+        <summary>What geographic areas do you cover?</summary>
+        <div class="faq-content">
+          Our physical office is located in Dammam, Eastern Province, KSA, and we actively serve industrial megaprojects throughout the Kingdom of Saudi Arabia. We also retain design facilities in Keswick, Ontario through our parent company, ARRHAM Group, Canada.
+        </div>
+      </details>
+
+      <!-- Category B: Process & Timeline -->
+      <h2 class="faq-category-title reveal slide-up"><i class="fas fa-tasks"></i> B. Project & Process Questions</h2>
+      
+      <details class="reveal slide-up stagger-1">
+        <summary>How do you ensure project timelines are met?</summary>
+        <div class="faq-content">
+          PGL utilizes a structured 5-step methodology (Assessment, Scheduling, CAD Design, Commissioning, Handover). We coordinate schedules directly with B2B operators to determine shifts (including low-occupancy night shifts), minimizing daily workflow disruption.
+        </div>
+      </details>
+
+      <details class="reveal slide-up stagger-2">
+        <summary>Do you handle municipality permits & civil defense approvals?</summary>
+        <div class="faq-content">
+          Yes. PGL drafts all engineering single-line plans, fire suppressions layouts, and cooling blueprints to comply fully with Saudi Building Codes and civil defense criteria, handling local regulatory clearances on behalf of the client.
+        </div>
+      </details>
+
+      <!-- Category C: Technical -->
+      <h2 class="faq-category-title reveal slide-up"><i class="fas fa-cogs"></i> C. Technical & Capability Questions</h2>
+      
+      <details class="reveal slide-up stagger-1">
+        <summary>Are your technicians and engineers certified?</summary>
+        <div class="faq-content">
+          Absolutely. Our engineering leads and installation crew hold credentials matching local municipality licenses, SBC, NFPA standards, and international IEEE distribution guidelines.
+        </div>
+      </details>
+
+      <details class="reveal slide-up stagger-2">
+        <summary>What standards do you comply with?</summary>
+        <div class="faq-content">
+          All electrical layouts meet IEC & IEEE rules; HVAC duct designs are optimized for hot climates; fire safety installations strictly adhere to civil-defense and NFPA rules; and plumbing layouts comply fully with sanitary specifications.
+        </div>
+      </details>
+
+      <!-- Category D: Support & Pricing -->
+      <h2 class="faq-category-title reveal slide-up"><i class="fas fa-calculator"></i> D. Scope, Support & Pricing Questions</h2>
+      
+      <details class="reveal slide-up stagger-1">
+        <summary>How do you determine electromechanical project costs?</summary>
+        <div class="faq-content">
+          We perform physical on-site assessments and cooling load analysis, review client architectural briefs, and deliver itemized transparent quotes covering engineering labor, materials procurement, municipal clearances, testing, and handover documentation.
+        </div>
+      </details>
+
+      <details class="reveal slide-up stagger-2">
+        <summary>Do you offer post-installation maintenance plans?</summary>
+        <div class="faq-content">
+          Yes. PGL offers preventive maintenance agreements covering active HVAC chiller tuning, panel load checks, generator testing, and data closet calibration.
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- CTA ACTION SECTION -->
+  <section class="section text-white" style="background: linear-gradient(135deg, var(--dark-blue), var(--medium-blue)); position: relative; overflow: hidden;">
+    <div class="container text-center reveal slide-up" style="position: relative; z-index: 2; max-width: 800px;">
+      <h2 class="text-white center-align" style="margin-bottom: 15px;">Have More Questions?</h2>
+      <p style="color: rgba(255,255,255,0.85); font-size: 1.15rem; margin-bottom: 35px;">Contact our operations office directly to consult on technical specifications.</p>
+      <div class="flex flex-center" style="gap: 15px; flex-wrap: wrap;">
+        <a href="./contact.html" class="btn btn-secondary">Get In Touch Now</a>
+        <a href="https://wa.me/966563151891" target="_blank" class="btn btn-outline btn-white"><i class="fab fa-whatsapp"></i> Chat Live with Engineers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Mount -->
+  <div id="header-placeholder"></div>
+  <div id="footer-placeholder"></div>
+
+  <!-- JS Scripts -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

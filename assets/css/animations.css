@@ -1,0 +1,161 @@
+/* ==========================================================================
+   🎬 PERFECT GULF LIMITED (PGL) - ANIMATION SUITE
+   Rich animations, scroll triggers, micro-interactions
+   ========================================================================== */
+
+/* 1. SCROLL REVEAL DEFINITIONS */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, opacity;
+}
+
+/* Directions */
+.reveal.fade-in {
+  transform: translateY(0);
+}
+
+.reveal.slide-up {
+  transform: translateY(40px);
+}
+
+.reveal.slide-down {
+  transform: translateY(-40px);
+}
+
+.reveal.slide-left {
+  transform: translateX(-40px);
+}
+
+.reveal.slide-right {
+  transform: translateX(40px);
+}
+
+.reveal.scale-up {
+  transform: scale(0.92);
+}
+
+/* Active Reveal States (Triggered by main.js Intersection Observer) */
+.reveal.visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* 2. STAGGER DELAYS */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+/* 3. KEYFRAME ANIMATIONS */
+
+/* floating micro-interaction */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-element {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Pulsing effect for indicators */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(19, 138, 220, 0.4);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(19, 138, 220, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(19, 138, 220, 0);
+  }
+}
+
+.pulse-indicator {
+  animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+/* Continuous slow spin for background gear icon shape */
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Shimmer load states */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.skeleton-loading {
+  background: #f6f7f8;
+  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 104px;
+  animation: shimmer 1.2s linear infinite forwards;
+}
+
+/* 4. HOVER AND FOCUS MICRO-INTERACTIONS */
+
+/* Dynamic Border underline expansion for menu items */
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--light-blue);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Timeline Connector Draw Animation */
+@keyframes drawLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+.animate-timeline-line {
+  animation: drawLine 2s ease-in-out forwards;
+}

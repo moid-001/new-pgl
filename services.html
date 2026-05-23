@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Perfect Gulf Limited</title>
+  <meta name="description" content="Explore Perfect Gulf Limited's 7 primary engineering and integration segments including electrical, HVAC, fire alarm safety, low current networks, UPS backup, data center fit-outs, and plumbing.">
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Service Card Custom Elements */
+    .services-grid-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card-bullet {
+      font-size: 0.9rem;
+      color: var(--light-text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .service-card-bullet i {
+      color: var(--primary-green);
+      font-size: 0.8rem;
+    }
+
+    /* Comparison Matrix Style */
+    .matrix-wrapper {
+      overflow-x: auto;
+      border: 1px solid var(--border-gray);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      background-color: var(--white);
+    }
+
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+      min-width: 800px;
+    }
+
+    .matrix-table th, 
+    .matrix-table td {
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--border-gray);
+    }
+
+    .matrix-table th {
+      background-color: var(--light-gray);
+      color: var(--dark-blue);
+      font-weight: 700;
+    }
+
+    .matrix-table tr:hover {
+      background-color: rgba(19, 138, 220, 0.02);
+    }
+
+    .matrix-check {
+      color: #25d366;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .matrix-service-name {
+      font-weight: 600;
+      color: var(--dark-blue);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dynamic Header Navigation Mount -->
+  <div id="header-placeholder"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-content reveal fade-in">
+      <div class="breadcrumbs">
+        <a href="./index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">Services</span>
+      </div>
+      <h1 style="margin-top: 10px;">Our Comprehensive Services</h1>
+      <p>End-to-End electromechanical & IT solutions across 7 core engineering segments.</p>
+    </div>
+  </section>
+
+  <!-- 7 SERVICE GRID BLOCK CARDS -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center reveal slide-up" style="margin-bottom: 55px;">
+        <h2 class="center-align">Professional Services Core</h2>
+        <p style="max-width: 600px; margin: 15px auto 0 auto;">PGL coordinates engineering across multiple trades to execute plans smoothly from blueprints through to operational sign-off.</p>
+      </div>
+
+      <div class="services-grid-list">
+        <!-- 1. Electrical -->
+        <div class="glass-card reveal slide-up stagger-1">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div style="font-size: 2.5rem; color: var(--light-blue);"><i class="fas fa-bolt"></i></div>
+            <span style="font-size: 0.8rem; font-weight: 700; background: rgba(19, 138, 220, 0.1); color: var(--light-blue); padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">⚡ Power</span>
+          </div>
+          <h3 style="margin-bottom: 12px;">Electrical Engineering & Implementation</h3>
+          <p style="font-size: 0.92rem; margin-bottom: 18px;">Comprehensive design, planning, and final system commissioning to deliver robust, compliant, and scalable electrical layouts.</p>
+          <ul style="margin-bottom: 25px;">
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Load List & Flow Analysis</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Short Circuit & Arc Studies</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Switchgear & Cable Works</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Solar Plant Installation</li>
+          </ul>
+          <a href="./services/electrical.html" class="btn btn-outline" style="width: 100%; display: block; font-size: 0.9rem; padding: 10px 0;">View Electrical Services</a>
+        </div>
+
+        <!-- 2. HVAC -->
+        <div class="glass-card reveal slide-up stagger-2">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div style="font-size: 2.5rem; color: var(--medium-blue);"><i class="fas fa-temperature-high"></i></div>
+            <span style="font-size: 0.8rem; font-weight: 700; background: rgba(11, 121, 196, 0.1); color: var(--medium-blue); padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">🌡️ Thermal</span>
+          </div>
+          <h3 style="margin-bottom: 12px;">HVAC Solutions</h3>
+          <p style="font-size: 0.92rem; margin-bottom: 18px;">Complete commercial and residential HVAC systems designed for optimal temperature control, air quality, and low energy costs.</p>
+          <ul style="margin-bottom: 25px;">
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Custom System Design</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Chillers, AHUs, & VRF</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Precision In-Row Cooling</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Smart Controls & Zoning</li>
+          </ul>
+          <a href="./services/hvac.html" class="btn btn-outline" style="width: 100%; display: block; font-size: 0.9rem; padding: 10px 0;">View HVAC Services</a>
+        </div>
+
+        <!-- 3. Fire Alarm -->
+        <div class="glass-card reveal slide-up stagger-3">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div style="font-size: 2.5rem; color: #ff3838;"><i class="fas fa-bell"></i></div>
+            <span style="font-size: 0.8rem; font-weight: 700; background: rgba(255, 56, 56, 0.1); color: #ff3838; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">🚨 Safety</span>
+          </div>
+          <h3 style="margin-bottom: 12px;">Fire Alarm & Suppression Systems</h3>
+          <p style="font-size: 0.92rem; margin-bottom: 18px;">Advanced detection, rapid response, and dependable clean agent or foam suppression designed for absolute life safety.</p>
+          <ul style="margin-bottom: 25px;">
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Risk Assessment & Sizing</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Smart Fire Alarm Setup</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Clean Agent & Foam Systems</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Water Mist & Sprinklers</li>
+          </ul>
+          <a href="./services/fire-alarm.html" class="btn btn-outline" style="width: 100%; display: block; font-size: 0.9rem; padding: 10px 0;">View Fire Safety Services</a>
+        </div>
+
+        <!-- 4. Low Current -->
+        <div class="glass-card reveal slide-up stagger-1">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div style="font-size: 2.5rem; color: var(--primary-green);"><i class="fas fa-network-wired"></i></div>
+            <span style="font-size: 0.8rem; font-weight: 700; background: rgba(115, 181, 47, 0.1); color: var(--primary-green); padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">📡 Network</span>
+          </div>
+          <h3 style="margin-bottom: 12px;">Low Current & Smart Systems</h3>
+          <p style="font-size: 0.92rem; margin-bottom: 18px;">Comprehensive structured cabling, security CCTV monitoring, smart access controls, and future-ready BMS integration.</p>
+          <ul style="margin-bottom: 25px;">
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Structured Network Cabling</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> CCTV & Surveillance Systems</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Access Control & Alarms</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Smart BMS & IoT Controls</li>
+          </ul>
+          <a href="./services/low-current.html" class="btn btn-outline" style="width: 100%; display: block; font-size: 0.9rem; padding: 10px 0;">View Low Current Services</a>
+        </div>
+
+        <!-- 5. UPS -->
+        <div class="glass-card reveal slide-up stagger-2">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div style="font-size: 2.5rem; color: #ff9f43;"><i class="fas fa-car-battery"></i></div>
+            <span style="font-size: 0.8rem; font-weight: 700; background: rgba(255, 159, 67, 0.1); color: #ff9f43; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">🔋 Backup</span>
+          </div>
+          <h3 style="margin-bottom: 12px;">UPS & Power Backup Systems</h3>
+          <p style="font-size: 0.92rem; margin-bottom: 18px;">Instant power continuity, high-reliability battery bank integrations, sizing analysis, and professional system commissioning.</p>
+          <ul style="margin-bottom: 25px;">
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> UPS Sizing & Selection</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Battery System Integration</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Power Capacity & Load Flow</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Installation & Commissioning</li>
+          </ul>
+          <a href="./services/ups.html" class="btn btn-outline" style="width: 100%; display: block; font-size: 0.9rem; padding: 10px 0;">View Power Backup Services</a>
+        </div>
+
+        <!-- 6. White Space Data Center -->
+        <div class="glass-card reveal slide-up stagger-3">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div style="font-size: 2.5rem; color: #00d2d3;"><i class="fas fa-server"></i></div>
+            <span style="font-size: 0.8rem; font-weight: 700; background: rgba(0, 210, 211, 0.1); color: #00d2d3; padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">🖥️ Data Center</span>
+          </div>
+          <h3 style="margin-bottom: 12px;">White Space Data Center Fit-Out</h3>
+          <p style="font-size: 0.92rem; margin-bottom: 18px;">Performance-driven layout engineering, modular IT racks, advanced cooling containments, and structured cabling guides.</p>
+          <ul style="margin-bottom: 25px;">
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Rack & Power Infrastructure</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Advanced Cooling Systems</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Cable Routing & Labeling</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Tier-Compliant Scalability</li>
+          </ul>
+          <a href="./services/data-center.html" class="btn btn-outline" style="width: 100%; display: block; font-size: 0.9rem; padding: 10px 0;">View Data Center Services</a>
+        </div>
+
+        <!-- 7. Plumbing -->
+        <div class="glass-card reveal slide-up stagger-1">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div style="font-size: 2.5rem; color: var(--dark-blue);"><i class="fas fa-wrench"></i></div>
+            <span style="font-size: 0.8rem; font-weight: 700; background: rgba(1, 101, 174, 0.1); color: var(--dark-blue); padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">🔧 Piping</span>
+          </div>
+          <h3 style="margin-bottom: 12px;">Plumbing Work</h3>
+          <p style="font-size: 0.92rem; margin-bottom: 18px;">High-grade water distribution lines, drainage venting, custom sanitary fixtures installation, and rigorous leak validation.</p>
+          <ul style="margin-bottom: 25px;">
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Water Supply & Distribution</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Drainage & Sewerage Lines</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Sanitary Fixtures & Fitting</li>
+            <li class="service-card-bullet"><i class="fas fa-circle"></i> Hydrostatic Pressure Testing</li>
+          </ul>
+          <a href="./services/plumbing.html" class="btn btn-outline" style="width: 100%; display: block; font-size: 0.9rem; padding: 10px 0;">View Plumbing Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE COMPARISON MATRIX -->
+  <section class="section section-bg" style="border-top: 1px solid var(--border-gray);">
+    <div class="container">
+      <div class="text-center reveal slide-up" style="margin-bottom: 50px;">
+        <h2 class="center-align">Service Applicability Matrix</h2>
+        <p style="max-width: 600px; margin: 15px auto 0 auto;">Review which electromechanical services correspond to specific commercial sectors.</p>
+      </div>
+
+      <div class="matrix-wrapper reveal scale-up">
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th>Core Services Offered</th>
+              <th style="text-align: center;">Industrial</th>
+              <th style="text-align: center;">Data Centers</th>
+              <th style="text-align: center;">Commercial</th>
+              <th style="text-align: center;">Healthcare</th>
+              <th style="text-align: center;">Renewables</th>
+              <th style="text-align: center;">Infrastructure</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="matrix-service-name">⚡ Electrical engineering</td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+            </tr>
+            <tr>
+              <td class="matrix-service-name">🌡️ HVAC Solutions</td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><span style="color:#e0e0e0;"><i class="far fa-circle"></i></span></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+            </tr>
+            <tr>
+              <td class="matrix-service-name">🚨 Fire Safety Suppression</td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+            </tr>
+            <tr>
+              <td class="matrix-service-name">📡 Low Current BMS Automation</td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><span style="color:#e0e0e0;"><i class="far fa-circle"></i></span></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+            </tr>
+            <tr>
+              <td class="matrix-service-name">🔋 UPS Power Redundancy</td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+            </tr>
+            <tr>
+              <td class="matrix-service-name">🖥️ White Space Data Center Fits</td>
+              <td class="matrix-check"><span style="color:#e0e0e0;"><i class="far fa-circle"></i></span></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><span style="color:#e0e0e0;"><i class="far fa-circle"></i></span></td>
+              <td class="matrix-check"><span style="color:#e0e0e0;"><i class="far fa-circle"></i></span></td>
+              <td class="matrix-check"><span style="color:#e0e0e0;"><i class="far fa-circle"></i></span></td>
+            </tr>
+            <tr>
+              <td class="matrix-service-name">🔧 Plumbing & Drainage Work</td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><span style="color:#e0e0e0;"><i class="far fa-circle"></i></span></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+              <td class="matrix-check"><span style="color:#e0e0e0;"><i class="far fa-circle"></i></span></td>
+              <td class="matrix-check"><i class="fas fa-check-circle"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA ACTION SECTION -->
+  <section class="section text-white" style="background: linear-gradient(135deg, var(--dark-blue), var(--medium-blue)); position: relative; overflow: hidden;">
+    <div class="container text-center reveal slide-up" style="position: relative; z-index: 2; max-width: 800px;">
+      <h2 class="text-white center-align" style="margin-bottom: 15px;">Need a Tailored Mechanical & IT Layout?</h2>
+      <p style="color: rgba(255,255,255,0.85); font-size: 1.15rem; margin-bottom: 35px;">Our design specialists deliver certified plans matching your exact structure parameters.</p>
+      <div class="flex flex-center" style="gap: 15px; flex-wrap: wrap;">
+        <a href="./contact.html" class="btn btn-secondary">Get Free Expert Consultation</a>
+        <a href="./portfolio.html" class="btn btn-outline btn-white">Browse Case Studies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Mount -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JS Scripts -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Gallery | Perfect Gulf Limited</title>
+  <meta name="description" content="Browse PGL's visual gallery detailing our electrical cable management, commercial HVAC ducts installation, fire safety alarms, and data center white space fit-outs.">
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Gallery-specific custom styles */
+    .gallery-filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 45px;
+    }
+
+    .gallery-filter-btn {
+      background: var(--light-gray);
+      border: 1px solid var(--border-gray);
+      color: var(--light-text);
+      padding: 8px 20px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: var(--radius-btn);
+      cursor: pointer;
+      transition: var(--transition-normal);
+    }
+
+    .gallery-filter-btn.active,
+    .gallery-filter-btn:hover {
+      background: var(--light-blue);
+      color: var(--white);
+      border-color: transparent;
+    }
+
+    /* Masonry/Flex Grid */
+    .gallery-masonry {
+      columns: 3 320px;
+      column-gap: 30px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 30px;
+      background: var(--white);
+      border: 1px solid var(--border-gray);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      break-inside: avoid;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px) scale(1.01);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--light-blue);
+    }
+
+    .gallery-img-container {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--dark-gradient-start), var(--dark-gradient-end));
+      aspect-ratio: 4/3;
+    }
+
+    .gallery-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover .gallery-img-container img {
+      transform: scale(1.08);
+      filter: brightness(0.7);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(1, 101, 174, 0.85), transparent 70%);
+      opacity: 0;
+      transition: var(--transition-normal);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-info {
+      color: var(--white);
+    }
+
+    .gallery-info h4 {
+      color: var(--white);
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    .gallery-info p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.8rem;
+      margin: 0;
+    }
+
+    .gallery-card-body {
+      padding: 15px 20px;
+    }
+
+    .gallery-card-body h3 {
+      font-size: 1rem;
+      color: var(--dark-blue);
+      margin-bottom: 5px;
+    }
+
+    .gallery-card-body p {
+      font-size: 0.82rem;
+      color: var(--light-text);
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dynamic Header Navigation Mount -->
+  <div id="header-placeholder"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-content reveal fade-in">
+      <div class="breadcrumbs">
+        <a href="./index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">Gallery</span>
+      </div>
+      <h1 style="margin-top: 10px;">Project Gallery</h1>
+      <p>Visual showcase of our active engineering, installations, and completed megaprojects.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY WITH INTERACTIVE LIGHTBOX AND FILTERS -->
+  <section class="section">
+    <div class="container">
+      
+      <!-- Category Filter Bar -->
+      <div class="gallery-filter-bar reveal slide-up">
+        <button class="gallery-filter-btn active" data-filter="all">All Photos</button>
+        <button class="gallery-filter-btn" data-filter="electrical">Electrical Grid</button>
+        <button class="gallery-filter-btn" data-filter="hvac">HVAC Ducts</button>
+        <button class="gallery-filter-btn" data-filter="fire">Fire Safety</button>
+        <button class="gallery-filter-btn" data-filter="datacenter">Data Centers</button>
+        <button class="gallery-filter-btn" data-filter="petrofiber">Aziziyah Petrofiber</button>
+      </div>
+
+      <!-- Masonry Layout of Photos -->
+      <div class="gallery-masonry reveal slide-up">
+        
+        <!-- 1. Electrical Cable Trays -->
+        <div class="gallery-item" data-category="electrical">
+          <a href="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" class="gallery-link" data-caption="PGL Heavy Subpanel Wiring & Cable Tray management - KSA Grid.">
+            <div class="gallery-img-container">
+              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Electrical Cable Trays subpanel wiring">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h4>⚡ Cable Tray Installation</h4>
+                  <p>Category: Electrical Systems</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-card-body">
+            <h3>Subpanel Wiring Alignment</h3>
+            <p>Clean structural spacing matching Saudi Building Code grid compliance.</p>
+          </div>
+        </div>
+
+        <!-- 2. HVAC Commercial Ducting -->
+        <div class="gallery-item" data-category="hvac">
+          <a href="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" class="gallery-link" data-caption="Commercial Ventilation Duct Networks rigging - Perfect Gulf Limited.">
+            <div class="gallery-img-container">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Commercial HVAC ventilation duct systems">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h4>🌡️ Heavy Ventilation Ducts</h4>
+                  <p>Category: HVAC Solutions</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-card-body">
+            <h3>Commercial HVAC Ducting</h3>
+            <p>Thermal conditioning layout installed in high-bay logistics plant.</p>
+          </div>
+        </div>
+
+        <!-- 3. T3 Data Center Containment -->
+        <div class="gallery-item" data-category="datacenter">
+          <a href="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" class="gallery-link" data-caption="White Space Fit-Out: Server racks rigging with hot-aisle containment curtains.">
+            <div class="gallery-img-container">
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80" alt="High speed server room racks fit-out">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h4>🖥️ Server Room White Space</h4>
+                  <p>Category: Data Center Fit-Out</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-card-body">
+            <h3>Data Center White Space Fit-Out</h3>
+            <p>Rigged high-load cable runway paths and isolated server corridors.</p>
+          </div>
+        </div>
+
+        <!-- 4. Fire Alarm Panel -->
+        <div class="gallery-item" data-category="fire">
+          <a href="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" class="gallery-link" data-caption="Certified Addressable Fire Alarm warning panel panel.">
+            <div class="gallery-img-container">
+              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Fire protection warning panel wiring details">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h4>🚨 Warning Panels Config</h4>
+                  <p>Category: Fire Protection Safety</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-card-body">
+            <h3>Fire Warning Panel Wiring</h3>
+            <p>Civil-defense compliant safety indicators, addressable loops.</p>
+          </div>
+        </div>
+
+        <!-- 5. Aziziyah Petrofiber - Office Lighting -->
+        <div class="gallery-item" data-category="petrofiber">
+          <a href="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" class="gallery-link" data-caption="Completed office lighting, electrical, and HVAC layout at Petrofibre Office.">
+            <div class="gallery-img-container">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="Office lobby finished electromechanical layout">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h4>★ Petrofibre Finished Lobby</h4>
+                  <p>Category: Aziziyah Office Fit-Out</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-card-body">
+            <h3>Aziziyah Petrofiber Finished Lobby</h3>
+            <p>Seamless execution of decorative lights, concealed ducts, and sprinklers.</p>
+          </div>
+        </div>
+
+        <!-- 6. Aziziyah Petrofiber - Server Rack -->
+        <div class="gallery-item" data-category="petrofiber">
+          <a href="https://images.unsplash.com/photo-1596207891396-226be289315d?auto=format&fit=crop&w=800&q=80" class="gallery-link" data-caption="Structured fiber-optic cabling and patch panels inside Aziziyah branch closet.">
+            <div class="gallery-img-container">
+              <img src="https://images.unsplash.com/photo-1596207891396-226be289315d?auto=format&fit=crop&w=600&q=80" alt="Structured server rack fiber cables wiring">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <h4>★ Structured IT Server Closet</h4>
+                  <p>Category: Aziziyah Office Fit-Out</p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="gallery-card-body">
+            <h3>Aziziyah Petrofiber Data Closet</h3>
+            <p>10Gbps structured patch panels, organized cable runs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Mount -->
+  <div id="header-placeholder"></div>
+  <div id="footer-placeholder"></div>
+
+  <!-- JS Scripts -->
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/gallery.js"></script>
+</body>
+</html>

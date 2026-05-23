@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Perfect Gulf Limited</title>
+  <meta name="description" content="Discover Perfect Gulf Limited (PGL), a premier electromechanical & IT infrastructure provider. Subsidiary of ARRHAM Group (Canada), offering global expertise and local execution in Saudi Arabia.">
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Timeline styling */
+    .timeline-container {
+      position: relative;
+      max-width: 800px;
+      margin: 40px auto 0 auto;
+      padding: 20px 0;
+    }
+
+    .timeline-container::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background-color: var(--border-gray);
+      transform: translateX(-50%);
+      border-radius: 2px;
+      z-index: 1;
+    }
+
+    .timeline-step {
+      position: relative;
+      width: 50%;
+      padding: 20px 40px;
+      z-index: 2;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    .timeline-step:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-step:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+
+    .timeline-badge {
+      position: absolute;
+      top: 25px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--white);
+      border: 3px solid var(--light-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--dark-blue);
+      font-weight: bold;
+      z-index: 10;
+      transition: var(--transition-normal);
+    }
+
+    .timeline-step:nth-child(odd) .timeline-badge {
+      right: -20px;
+    }
+
+    .timeline-step:nth-child(even) .timeline-badge {
+      left: -20px;
+    }
+
+    .timeline-step:hover .timeline-badge {
+      background-color: var(--light-blue);
+      color: var(--white);
+      transform: scale(1.15);
+      box-shadow: 0 0 15px rgba(19, 138, 220, 0.4);
+    }
+
+    .timeline-content {
+      background: var(--white);
+      border: 1px solid var(--border-gray);
+      border-radius: var(--radius-md);
+      padding: 25px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-normal);
+    }
+
+    .timeline-step:hover .timeline-content {
+      border-color: var(--primary-green);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .timeline-step h3 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+      color: var(--dark-blue);
+    }
+
+    .timeline-step p {
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Commercial Registration Style */
+    .cr-badge {
+      background: linear-gradient(135deg, #fff, var(--light-gray));
+      border: 2px dashed var(--light-blue);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      text-align: center;
+      box-shadow: var(--shadow-glass);
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+    .cr-number {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--dark-blue);
+      letter-spacing: 2px;
+      margin: 15px 0;
+      font-family: monospace;
+    }
+
+    @media (max-width: 768px) {
+      .timeline-container::before {
+        left: 30px;
+      }
+      .timeline-step {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 20px;
+        text-align: left !important;
+      }
+      .timeline-step:nth-child(even) {
+        left: 0;
+      }
+      .timeline-step:nth-child(odd) .timeline-badge,
+      .timeline-step:nth-child(even) .timeline-badge {
+        left: 10px;
+      }
+    }
+
+      /* Team Section Styles */
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .team-card {
+        background: var(--white);
+        border: 1px solid var(--border-gray);
+        border-radius: var(--radius-md);
+        padding: 40px 25px;
+        text-align: center;
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition-normal);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .team-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-green), var(--light-blue));
+        transition: var(--transition-normal);
+      }
+
+      .team-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-md);
+        border-color: var(--primary-green);
+      }
+
+      .team-card:hover::before {
+        height: 6px;
+      }
+
+      .team-avatar-wrapper {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        margin: 0 auto 22px auto;
+        overflow: hidden;
+        border: 4px solid var(--border-gray);
+        background: var(--light-gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition-normal);
+        position: relative;
+      }
+
+      .team-card:hover .team-avatar-wrapper {
+        border-color: var(--primary-green);
+        transform: scale(1.05);
+      }
+
+      .team-avatar-placeholder {
+        font-size: 3.5rem;
+        color: var(--dark-gray);
+        transition: var(--transition-normal);
+      }
+
+      .team-card:hover .team-avatar-placeholder {
+        color: var(--primary-green);
+      }
+
+      .team-role {
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--light-blue);
+        margin-bottom: 8px;
+      }
+
+      .team-name {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--dark-blue);
+        margin-bottom: 12px;
+      }
+
+      .team-bio {
+        font-size: 0.9rem;
+        color: var(--light-text);
+        line-height: 1.5;
+        margin-bottom: 22px;
+      }
+
+      .team-social {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .team-social-link {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--light-gray);
+        color: var(--dark-blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.95rem;
+        transition: var(--transition-normal);
+      }
+
+      .team-social-link:hover {
+        background: var(--primary-green);
+        color: var(--white);
+        transform: translateY(-2px);
+      }
+  </style>
+</head>
+<body>
+
+  <!-- Dynamic Header Navigation Mount -->
+  <div id="header-placeholder"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-content reveal fade-in">
+      <div class="breadcrumbs">
+        <a href="./index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">About Us</span>
+      </div>
+      <h1 style="margin-top: 10px;">About Perfect Gulf Limited</h1>
+      <p>Global Engineering Excellence. Local Infrastructure Execution.</p>
+    </div>
+  </section>
+
+  <!-- COMPANY OVERVIEW & ARRHAM ties -->
+  <section class="section">
+    <div class="container grid grid-2" style="align-items: center; gap: 50px;">
+      <div class="reveal slide-left">
+        <h2 style="margin-bottom: 20px;">Corporate Overview</h2>
+        <p>Perfect Gulf Limited (PGL) is a high-fidelity provider of Electromechanical, HVAC, Fire Protection, and IT Services headquartered in Dammam, Eastern Province, Kingdom of Saudi Arabia.</p>
+        <p>As a key subsidiary of the **ARRHAM Group** (based in Keswick, Ontario, Canada), we bring massive global infrastructure design experience and pair it with direct, certified local execution capabilities in KSA.</p>
+        <p>Our focus lies in delivering future-ready, certified, and fully compliant engineering layouts, helping industrial commercial enterprises scale operations with zero downtime.</p>
+      </div>
+      
+      <div class="reveal slide-right">
+        <!-- Credibility Display - CR Badge -->
+        <div class="cr-badge">
+          <div style="font-size: 3rem; color: var(--primary-green); margin-bottom: 10px;">
+            <i class="fas fa-file-contract"></i>
+          </div>
+          <h3 style="font-size: 1.3rem; text-transform: uppercase;">Commercial Registration</h3>
+          <p style="font-size: 0.85rem; color: var(--light-text); margin: 5px 0 0 0;">Kingdom of Saudi Arabia License</p>
+          <div class="cr-number">7043560932</div>
+          <div class="flex flex-center" style="gap: 20px; font-size: 0.85rem; color: var(--dark-gray); font-weight: 600;">
+            <span><i class="fas fa-calendar-check" style="color: var(--light-blue); margin-right: 5px;"></i> Released: 22/01/2025</span>
+            <span><i class="fas fa-check-circle" style="color: #25d366; margin-right: 5px;"></i> Active Status</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--light-text); margin-top: 15px; font-style: italic;">Entity: Limited Liability Company</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION SECTION -->
+  <section class="section section-bg">
+    <div class="container grid grid-2" style="gap: 40px;">
+      <!-- Mission -->
+      <div class="glass-card reveal slide-up stagger-1" style="background-color: var(--white);">
+        <div style="font-size: 2.2rem; color: var(--light-blue); margin-bottom: 15px;"><i class="fas fa-bullseye"></i></div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: var(--dark-blue);">Our Mission</h3>
+        <p style="line-height: 1.6; margin: 0;">To deliver innovative, compliant, and highly scalable electromechanical & data center infrastructure solutions. We aim to support B2B sectors in the region by pairing international engineering standards with reliable local construction techniques, maximizing project execution quality.</p>
+      </div>
+      
+      <!-- Vision -->
+      <div class="glass-card reveal slide-up stagger-2" style="background-color: var(--white);">
+        <div style="font-size: 2.2rem; color: var(--primary-green); margin-bottom: 15px;"><i class="fas fa-eye"></i></div>
+        <h3 style="font-size: 1.5rem; margin-bottom: 12px; color: var(--dark-blue);">Our Vision</h3>
+        <p style="line-height: 1.6; margin: 0;">To become the primary electromechanical contracting and systems integration partner in Saudi Arabia, recognized for executing complex technological layouts safely, sustainably, and with unwavering operational integrity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR 5-STEP METHODOLOGY TIMELINE -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center reveal slide-up" style="margin-bottom: 50px;">
+        <h2 class="center-align">The 5-Step Methodology</h2>
+        <p style="max-width: 600px; margin: 15px auto 0 auto;">PGL employs a rigorous, structured project management timeline ensuring that nothing is missed from proposal to support.</p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Step 1 -->
+        <div class="timeline-step reveal slide-left stagger-1">
+          <div class="timeline-badge">1</div>
+          <div class="timeline-content">
+            <h3>Consultation & Assessment</h3>
+            <p>Our engineers evaluate your structural requirements, utility availability, building codes compliance, and load calculations on-site to frame initial briefs.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-step reveal slide-right stagger-2">
+          <div class="timeline-badge">2</div>
+          <div class="timeline-content">
+            <h3>Project Planning</h3>
+            <p>We draft comprehensive project schedules, allocate specialized technicians, specify procurement resources, and align milestones with minimal client disruption.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-step reveal slide-left stagger-3">
+          <div class="timeline-badge">3</div>
+          <div class="timeline-content">
+            <h3>Custom Solution Design</h3>
+            <p>Drafting precise architectural blueprints, MV/LV wiring networks, cooling load flow simulations, and HVAC single line diagrams using professional CAD tools.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-step reveal slide-right stagger-4">
+          <div class="timeline-badge">4</div>
+          <div class="timeline-content">
+            <h3>Install & Test</h3>
+            <p>Physical setup of heavy electrical panels, duct networks, UPS arrays, and sensors. Undergoes rigorous load-testing, insulation analysis, and pressure checks before start.</p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="timeline-step reveal slide-left stagger-5">
+          <div class="timeline-badge">5</div>
+          <div class="timeline-content">
+            <h3>Handover & Support</h3>
+            <p>Delivery of completed regulatory document packages, system tutorials, commissioning certificates, and launch of preventive maintenance cycles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP & TEAM SECTION -->
+  <section class="section" style="border-top: 1px solid var(--border-gray);">
+    <div class="container">
+      <div class="text-center reveal slide-up" style="margin-bottom: 50px;">
+        <h2 class="center-align">Leadership & Key Members</h2>
+        <p style="max-width: 600px; margin: 15px auto 0 auto;">Meet the visionary leaders and experts driving innovation and execution at Perfect Gulf Limited.</p>
+      </div>
+
+      <div class="team-grid">
+        <!-- 1. Founder -->
+        <div class="team-card reveal slide-up stagger-1">
+          <div class="team-avatar-wrapper">
+            <!-- PLACEHOLDER FOR FOUNDER PHOTO -->
+            <!-- Once photo is ready, replace standard icon with: <img src="./assets/images/team/founder.jpg" alt="Founder Name" class="team-avatar-img"> -->
+            <div class="team-avatar-placeholder">
+              <i class="fas fa-user-tie"></i>
+            </div>
+          </div>
+          <div class="team-role">Founder</div>
+          <h3 class="team-name">[Founder Name]</h3>
+          <p class="team-bio">Established Perfect Gulf Limited with the vision to integrate world-class electromechanical engineering solutions across the region's B2B and industrial sectors.</p>
+          <div class="team-social">
+            <a href="#" class="team-social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-social-link" title="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- 2. CEO -->
+        <div class="team-card reveal slide-up stagger-2">
+          <div class="team-avatar-wrapper">
+            <!-- PLACEHOLDER FOR CEO PHOTO -->
+            <!-- Once photo is ready, replace standard icon with: <img src="./assets/images/team/ceo.jpg" alt="CEO Name" class="team-avatar-img"> -->
+            <div class="team-avatar-placeholder">
+              <i class="fas fa-user-tie"></i>
+            </div>
+          </div>
+          <div class="team-role">Chief Executive Officer</div>
+          <h3 class="team-name">[CEO Name]</h3>
+          <p class="team-bio">Steering PGL's strategic growth, operations compliance, and client partnerships, bringing extensive global executive experience from the ARRHAM Group.</p>
+          <div class="team-social">
+            <a href="#" class="team-social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-social-link" title="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- 3. Team Member -->
+        <div class="team-card reveal slide-up stagger-3">
+          <div class="team-avatar-wrapper">
+            <!-- PLACEHOLDER FOR TEAM MEMBER PHOTO -->
+            <!-- Once photo is ready, replace standard icon with: <img src="./assets/images/team/member.jpg" alt="Team Member Name" class="team-avatar-img"> -->
+            <div class="team-avatar-placeholder">
+              <i class="fas fa-user-cog"></i>
+            </div>
+          </div>
+          <div class="team-role">Lead Engineer / Project Manager</div>
+          <h3 class="team-name">[Team Member Name]</h3>
+          <p class="team-bio">Overseeing on-site compliance, technical precision, and execution timelines across PGL's complex HVAC, electrical, and white-space installations.</p>
+          <div class="team-social">
+            <a href="#" class="team-social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="team-social-link" title="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERSHIP & PARENT CONNECTION SECTION -->
+  <section class="section section-bg" style="border-top: 1px solid var(--border-gray);">
+    <div class="container grid grid-2" style="align-items: center; gap: 50px;">
+      <div class="reveal slide-left" style="background-color: var(--white); border-radius: var(--radius-md); padding: 30px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-gray);">
+        <h3 style="margin-bottom: 15px; color: var(--dark-blue); font-size: 1.4rem;">Global Connection: ARRHAM Group</h3>
+        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--light-text);">Our operations are fully backed by the engineering resources and global experience of our parent company in Ontario, Canada.</p>
+        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--light-text); margin-bottom: 0;">This integration allows PGL to import premium building materials, apply high-end designs validated by Western standards, and recruit specialized engineering talent for complex Saudi megaprojects.</p>
+      </div>
+      <div class="reveal slide-right text-center">
+        <div style="font-size: 5rem; color: rgba(1, 101, 174, 0.1); margin-bottom: 20px;"><i class="fas fa-globe-americas"></i></div>
+        <h3 style="color: var(--dark-blue); font-weight: 700; font-size: 1.6rem; margin-bottom: 10px;">"Global Design. Local Execution."</h3>
+        <p style="max-width: 450px; margin: 0 auto;">Through this partnership, our clients gain the peace of mind that comes from a multinational backing combined with local regulatory speed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA ACTION SECTION -->
+  <section class="section text-white" style="background: linear-gradient(135deg, var(--dark-blue), var(--medium-blue)); position: relative; overflow: hidden;">
+    <div class="container text-center reveal slide-up" style="position: relative; z-index: 2; max-width: 800px;">
+      <h2 class="text-white center-align" style="margin-bottom: 15px;">Want to Work with Us?</h2>
+      <p style="color: rgba(255,255,255,0.85); font-size: 1.15rem; margin-bottom: 35px;">Let's discuss your industrial electromechanical layout. We offer custom, compliant quotations.</p>
+      <div class="flex flex-center" style="gap: 15px; flex-wrap: wrap;">
+        <a href="./contact.html" class="btn btn-secondary">Start Your Project</a>
+        <a href="./services.html" class="btn btn-outline btn-white">View Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Mount -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JS Scripts -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

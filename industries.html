@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industries We Serve | Perfect Gulf Limited</title>
+  <meta name="description" content="Review the 10 core industrial, commercial, municipal, and residential sectors served by PGL's advanced electromechanical and IT infrastructure integration.">
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Sector Cards Custom Styling */
+    .sector-card {
+      background: var(--white);
+      border: 1px solid var(--border-gray);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .sector-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--light-blue);
+    }
+
+    .sector-icon {
+      font-size: 2.2rem;
+      color: var(--light-blue);
+      margin-bottom: 20px;
+      transition: var(--transition-normal);
+    }
+
+    .sector-card:hover .sector-icon {
+      color: var(--primary-green);
+      transform: scale(1.05);
+    }
+
+    .sector-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: var(--dark-blue);
+    }
+
+    .sector-card p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: var(--light-text);
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .sector-solutions {
+      border-top: 1px solid var(--border-gray);
+      padding-top: 15px;
+      margin-top: auto;
+    }
+
+    .sector-solutions-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--dark-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .sector-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background-color: var(--light-gray);
+      color: var(--light-text);
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+
+    /* Alternating Sector Spotlights */
+    .spotlight-row {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 80px;
+    }
+
+    .spotlight-row:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .spotlight-content {
+      flex: 1;
+    }
+
+    .spotlight-visual {
+      flex: 1;
+      background: linear-gradient(135deg, rgba(1, 101, 174, 0.05), rgba(115, 181, 47, 0.05));
+      border: 1px solid var(--border-gray);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .spotlight-row,
+      .spotlight-row:nth-child(even) {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 50px;
+      }
+      .spotlight-visual {
+        width: 100%;
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dynamic Header Navigation Mount -->
+  <div id="header-placeholder"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-content reveal fade-in">
+      <div class="breadcrumbs">
+        <a href="./index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">Industries</span>
+      </div>
+      <h1 style="margin-top: 10px;">Industries We Serve</h1>
+      <p>Custom electromechanical & IT solutions optimized across 10 specialized sectors.</p>
+    </div>
+  </section>
+
+  <!-- 10 SECTOR CARDS GRID -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center reveal slide-up" style="margin-bottom: 55px;">
+        <h2 class="center-align">Sectors & Solutions</h2>
+        <p style="max-width: 600px; margin: 15px auto 0 auto;">PGL adapts services to meet rigorous standards across distinct, demanding market sectors.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- 1. Industrial Manufacturing -->
+        <div class="sector-card reveal slide-up stagger-1">
+          <div class="sector-icon"><i class="fas fa-industry"></i></div>
+          <h3>Industrial Manufacturing</h3>
+          <p>Heavy electrical panel wiring, substation setups, process cooling duct layouts, boosted plumbing systems, and continuous redundant power systems matching factory safety codes.</p>
+          <div class="sector-solutions">
+            <div class="sector-solutions-title">Applicable Core Services:</div>
+            <span class="sector-tag">Electrical</span>
+            <span class="sector-tag">HVAC</span>
+            <span class="sector-tag">UPS Backup</span>
+            <span class="sector-tag">Plumbing</span>
+          </div>
+        </div>
+
+        <!-- 2. Institutional & Commercial -->
+        <div class="sector-card reveal slide-up stagger-2">
+          <div class="sector-icon"><i class="fas fa-hotel"></i></div>
+          <h3>Commercial Buildings</h3>
+          <p>Complete shopping malls, hotels, and business suites setups. Multi-split VRF air cooling, public addressing speakers grids, BMS automation, and NFPA certified sprinklers piping.</p>
+          <div class="sector-solutions">
+            <div class="sector-solutions-title">Applicable Core Services:</div>
+            <span class="sector-tag">HVAC</span>
+            <span class="sector-tag">Fire Safety</span>
+            <span class="sector-tag">Low Current</span>
+            <span class="sector-tag">Plumbing</span>
+          </div>
+        </div>
+
+        <!-- 3. Data Centers & IT -->
+        <div class="sector-card reveal slide-up stagger-3">
+          <div class="sector-icon"><i class="fas fa-server"></i></div>
+          <h3>Data Centers & IT Infrastructure</h3>
+          <p>Highly specialized modular server room fits. Hot/cold aisle containment layouts, raised technical floors, overhead fiber ducts, and precision high-density in-row coolers.</p>
+          <div class="sector-solutions">
+            <div class="sector-solutions-title">Applicable Core Services:</div>
+            <span class="sector-tag">White Space Fit-Out</span>
+            <span class="sector-tag">UPS Backup</span>
+            <span class="sector-tag">Low Current</span>
+            <span class="sector-tag">HVAC</span>
+          </div>
+        </div>
+
+        <!-- 4. EV Charging Stations -->
+        <div class="sector-card reveal slide-up stagger-1">
+          <div class="sector-icon"><i class="fas fa-charging-station"></i></div>
+          <h3>EV Charging Networks</h3>
+          <p>Fast DC charger configurations, high-voltage electrical grid interconnects, billing network interfaces, and safety automatic shutoffs wiring.</p>
+          <div class="sector-solutions">
+            <div class="sector-solutions-title">Applicable Core Services:</div>
+            <span class="sector-tag">Electrical</span>
+            <span class="sector-tag">Low Current</span>
+            <span class="sector-tag">UPS Systems</span>
+          </div>
+        </div>
+
+        <!-- 5. Renewable Energy (Solar) -->
+        <div class="sector-card reveal slide-up stagger-2">
+          <div class="sector-icon"><i class="fas fa-solar-panel"></i></div>
+          <h3>Renewable Energy Sites</h3>
+          <p>Solar power farm setups. PV inverter assemblies, DC/AC subpanel grids routing, outdoor cable tray frameworks, and protective surge arresters wiring.</p>
+          <div class="sector-solutions">
+            <div class="sector-solutions-title">Applicable Core Services:</div>
+            <span class="sector-tag">Electrical Engineering</span>
+            <span class="sector-tag">Low Current</span>
+            <span class="sector-tag">Plumbing</span>
+          </div>
+        </div>
+
+        <!-- 6. Healthcare & Medical -->
+        <div class="sector-card reveal slide-up stagger-3">
+          <div class="sector-icon"><i class="fas fa-hospital"></i></div>
+          <h3>Healthcare & Medical Facilities</h3>
+          <p>Hospital utility grids. 100% clean-agent fire suppression, isolated grounding panel wiring, precision temperature/humidity control systems, and double-conversion UPS backups.</p>
+          <div class="sector-solutions">
+            <div class="sector-solutions-title">Applicable Core Services:</div>
+            <span class="sector-tag">UPS Backup</span>
+            <span class="sector-tag">HVAC Solutions</span>
+            <span class="sector-tag">Fire Safety</span>
+            <span class="sector-tag">Plumbing</span>
+          </div>
+        </div>
+
+        <!-- 7. Residential Complexes -->
+        <div class="sector-card reveal slide-up stagger-1">
+          <div class="sector-icon"><i class="fas fa-home"></i></div>
+          <h3>Residential Smart Complex</h3>
+          <p>Multi-family villas utilities. Common water supply pumps, fire alarms network, video intercom gates, structured ethernet wiring, and central solar water heat arrays.</p>
+          <div class="sector-solutions">
+            <div class="sector-solutions-title">Applicable Core Services:</div>
+            <span class="sector-tag">Electrical</span>
+            <span class="sector-tag">Plumbing</span>
+            <span class="sector-tag">Low Current</span>
+            <span class="sector-tag">Fire Safety</span>
+          </div>
+        </div>
+
+        <!-- 8. Large-Scale Temporary Facilities -->
+        <div class="sector-card reveal slide-up stagger-2">
+          <div class="sector-icon"><i class="fas fa-campground"></i></div>
+          <h3>Temporary Mobile Facilities</h3>
+          <p>Rigging temporary power generators panels, trailer HVAC duct couplers, mobile septic piping networks, and emergency backup battery packs.</p>
+          <div class="sector-solutions">
+            <div class="sector-solutions-title">Applicable Core Services:</div>
+            <span class="sector-tag">Electrical</span>
+            <span class="sector-tag">HVAC</span>
+            <span class="sector-tag">UPS Systems</span>
+            <span class="sector-tag">Plumbing</span>
+          </div>
+        </div>
+
+        <!-- 9. Warehousing & Logistics -->
+        <div class="sector-card reveal slide-up stagger-3">
+          <div class="sector-icon"><i class="fas fa-box-open"></i></div>
+          <h3>Warehousing & Logistics</h3>
+          <p>High-bay lighting design layouts, ESFR fire sprinklers routing, sorting machines control wiring, and loading dock communication intercom networks.</p>
+          <div class="sector-solutions">
+            <div class="sector-solutions-title">Applicable Core Services:</div>
+            <span class="sector-tag">Fire Safety</span>
+            <span class="sector-tag">Electrical</span>
+            <span class="sector-tag">Low Current</span>
+          </div>
+        </div>
+
+        <!-- 10. Government & Municipal -->
+        <div class="sector-card reveal slide-up stagger-1" style="grid-column: span 1; max-width: 100%;">
+          <div class="sector-icon"><i class="fas fa-landmark"></i></div>
+          <h3>Government & Municipal Projects</h3>
+          <p>Adhering fully to rigorous government building codes and municipal specifications. Providing municipal offices with secure BMS interfaces, fire barriers, and public piping.</p>
+          <div class="sector-solutions">
+            <div class="sector-solutions-title">Applicable Core Services:</div>
+            <span class="sector-tag">Electrical</span>
+            <span class="sector-tag">HVAC</span>
+            <span class="sector-tag">Fire Safety</span>
+            <span class="sector-tag">Low Current</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTED USE CASE / SPOTLIGHTS -->
+  <section class="section section-bg" style="border-top: 1px solid var(--border-gray);">
+    <div class="container">
+      <div class="text-center reveal slide-up" style="margin-bottom: 60px;">
+        <h2 class="center-align">Specialized Use Case Spotlights</h2>
+        <p style="max-width: 600px; margin: 15px auto 0 auto;">Review how our integrated services solve complex, high-risk infrastructure problems.</p>
+      </div>
+
+      <!-- Spotlight 1 -->
+      <div class="spotlight-row reveal slide-up">
+        <div class="spotlight-content">
+          <span style="font-size: 0.8rem; font-weight: 700; background: rgba(19, 138, 220, 0.1); color: var(--light-blue); padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">⚡ Spotlight 01</span>
+          <h3 style="font-size: 1.8rem; margin: 15px 0; color: var(--dark-blue);">Data Center Cool & Power Redundancy</h3>
+          <p>Modern data centers demand continuous electrical availability. PGL deploys double-conversion UPS arrays paired with automatic transfer switches (ATS) connecting massive diesel backup generators.</p>
+          <p>Simultaneously, our HVAC engineers install precision high-density in-row cooling networks, utilizing isolated cold-aisle containments that prevent temperature surges in high-load server racks.</p>
+        </div>
+        <div class="spotlight-visual">
+          <div>
+            <div style="font-size: 4rem; color: var(--light-blue); margin-bottom: 15px;"><i class="fas fa-server"></i></div>
+            <h4 style="margin-bottom: 5px;">T4 Data Center Level</h4>
+            <p style="font-size: 0.85rem; margin: 0;">Redundancy factor: N+1 to 2N+1 systems</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spotlight 2 -->
+      <div class="spotlight-row reveal slide-up">
+        <div class="spotlight-content">
+          <span style="font-size: 0.8rem; font-weight: 700; background: rgba(115, 181, 47, 0.1); color: var(--primary-green); padding: 4px 10px; border-radius: 12px; text-transform: uppercase;">🌱 Spotlight 02</span>
+          <h3 style="font-size: 1.8rem; margin: 15px 0; color: var(--dark-blue);">Renewable Integration & Solar Farm grids</h3>
+          <p>As Saudi Arabia transitions towards sustainable utility generation, industrial sites require grid-tied solar integrations. Our electrical teams layout massive outdoor solar array subpanels.</p>
+          <p>We configure DC/AC inverters, install protective surge-arrester subpanels, run cabling through heavy-duty outdoor tray systems, and coordinate connection approvals with local utility regulators.</p>
+        </div>
+        <div class="spotlight-visual">
+          <div>
+            <div style="font-size: 4rem; color: var(--primary-green); margin-bottom: 15px;"><i class="fas fa-solar-panel"></i></div>
+            <h4 style="margin-bottom: 5px;">Solar Farms Integration</h4>
+            <p style="font-size: 0.85rem; margin: 0;">Reducing commercial grid carbon offsets</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA ACTION SECTION -->
+  <section class="section text-white" style="background: linear-gradient(135deg, var(--dark-blue), var(--medium-blue)); position: relative; overflow: hidden;">
+    <div class="container text-center reveal slide-up" style="position: relative; z-index: 2; max-width: 800px;">
+      <h2 class="text-white center-align" style="margin-bottom: 15px;">Do You Operate in One of These Sectors?</h2>
+      <p style="color: rgba(255,255,255,0.85); font-size: 1.15rem; margin-bottom: 35px;">Let our engineering experts evaluate your blueprints and deliver a custom systems coordination plan.</p>
+      <div class="flex flex-center" style="gap: 15px; flex-wrap: wrap;">
+        <a href="./contact.html" class="btn btn-secondary">Request Industry Consultation</a>
+        <a href="./services.html" class="btn btn-outline btn-white">Explore Services Hub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Mount -->
+  <div id="header-placeholder"></div>
+  <div id="footer-placeholder"></div>
+
+  <!-- JS Scripts -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

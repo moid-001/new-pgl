@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Schedule Consultation | Perfect Gulf Limited</title>
+  <meta name="description" content="Get in touch with Perfect Gulf Limited (PGL). Contact our electromechanical & IT infrastructure engineering office in Dammam, Saudi Arabia, or submit our validated B2B consultation request form.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Contact-specific premium styling */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 992px) {
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .info-card-set {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .contact-info-tile {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 25px;
+      background: var(--white);
+      border: 1px solid var(--border-gray);
+      border-radius: var(--radius-md);
+      transition: var(--transition-normal);
+    }
+
+    .contact-info-tile:hover {
+      border-color: var(--light-blue);
+      box-shadow: var(--shadow-sm);
+      transform: translateX(5px);
+    }
+
+    .contact-info-tile i {
+      font-size: 1.8rem;
+      color: var(--light-blue);
+      padding: 12px;
+      background: rgba(19, 138, 220, 0.08);
+      border-radius: 50%;
+      min-width: 54px;
+      text-align: center;
+    }
+
+    .contact-info-tile.whatsapp i {
+      color: #25d366;
+      background: rgba(37, 211, 102, 0.08);
+    }
+
+    .contact-info-tile h3 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: var(--dark-blue);
+    }
+
+    .contact-info-tile p, .contact-info-tile a {
+      font-size: 0.94rem;
+      color: var(--light-text);
+      margin-bottom: 0;
+    }
+
+    .contact-info-tile a:hover {
+      color: var(--light-blue);
+    }
+
+    /* Custom Form Layout & Inputs Styling */
+    .form-group {
+      margin-bottom: 22px;
+      position: relative;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      color: var(--dark-blue);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 14px 18px;
+      font-size: 0.95rem;
+      font-family: var(--font-body);
+      border: 1px solid var(--border-gray);
+      border-radius: var(--radius-sm);
+      background-color: var(--light-gray);
+      color: var(--dark-gray);
+      transition: var(--transition-normal);
+      outline: none;
+    }
+
+    .form-control:focus {
+      background-color: var(--white);
+      border-color: var(--light-blue);
+      box-shadow: 0 0 8px rgba(19, 138, 220, 0.15);
+    }
+
+    /* Double inputs in one row */
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 576px) {
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+    }
+
+    /* Radio button grid */
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      color: var(--light-text);
+      font-weight: 500;
+    }
+
+    .radio-option input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--light-blue);
+      cursor: pointer;
+    }
+
+    .btn-submit {
+      width: 100%;
+      font-size: 1.05rem;
+      padding: 16px;
+      margin-top: 10px;
+    }
+
+    /* Premium Map Container */
+    .map-container {
+      margin-top: 40px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-gray);
+      height: 350px;
+      position: relative;
+    }
+
+    .map-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--dark-gradient-start), var(--dark-gradient-end));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .map-grid-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.15;
+      background: 
+        radial-gradient(circle at 50% 50%, rgba(115, 181, 47, 0.2) 0%, transparent 60%),
+        linear-gradient(rgba(19, 138, 220, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(19, 138, 220, 0.1) 1px, transparent 1px);
+      background-size: 100% 100%, 30px 30px, 30px 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dynamic Header Navigation Mount -->
+  <div id="header-placeholder"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-content reveal fade-in">
+      <div class="breadcrumbs">
+        <a href="./index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">Contact Us</span>
+      </div>
+      <h1 style="margin-top: 10px;">Contact PGL Office</h1>
+      <p>Consult with our electromechanical and IT infrastructure experts to schedule site assessments and design proposals.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT & FORM SECTION -->
+  <section class="section">
+    <div class="container">
+      
+      <div class="contact-wrapper">
+        
+        <!-- COLUMN 1: INFORMATION CARDS -->
+        <div class="reveal slide-up stagger-1">
+          <h2 style="margin-bottom: 25px;">Get In Touch</h2>
+          <p style="margin-bottom: 30px; max-width: 500px;">Perfect Gulf Limited operates throughout the Kingdom of Saudi Arabia. Reach out to our local Dammam office, or schedule a live meeting with our engineering leads via WhatsApp.</p>
+          
+          <div class="info-card-set">
+            <!-- Address Tile -->
+            <div class="contact-info-tile">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Headquarters Address</h3>
+                <p>Building No. 8182, King Abdullah Street,<br>Ash Shati Ash Sharqi Dist, Dammam, KSA</p>
+              </div>
+            </div>
+            
+            <!-- Phone Tile -->
+            <div class="contact-info-tile">
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <h3>Direct Operations Line</h3>
+                <p><a href="tel:+966563151891">+966 563 151 891</a></p>
+                <p style="font-size: 0.82rem; color: var(--light-text); margin-top: 2px;">Support available Sunday - Thursday, 9 AM - 6 PM</p>
+              </div>
+            </div>
+            
+            <!-- Email Tile -->
+            <div class="contact-info-tile">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Inquiries & Quotations</h3>
+                <p><a href="mailto:contact@perfectgulflimited.com">contact@perfectgulflimited.com</a></p>
+                <p style="font-size: 0.82rem; color: var(--light-text); margin-top: 2px;">We typically reply within 1 business day</p>
+              </div>
+            </div>
+
+            <!-- WhatsApp Tile -->
+            <div class="contact-info-tile whatsapp">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <h3>Instant Connect WhatsApp</h3>
+                <p><a href="https://wa.me/966563151891" target="_blank" style="color: #25d366; font-weight: 600;">Chat Live with Engineers</a></p>
+                <p style="font-size: 0.82rem; color: var(--light-text); margin-top: 2px;">Direct deep-link for instant consultation</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PREMIUM PLACEHOLDER MAP -->
+          <div class="map-container reveal scale-up" style="margin-top: 30px;">
+            <div class="map-grid-bg"></div>
+            <div class="map-placeholder">
+              <div style="font-size: 3rem; color: var(--primary-green); margin-bottom: 15px;"><i class="fas fa-map-marked-alt"></i></div>
+              <h3 class="text-white" style="font-size: 1.3rem; margin-bottom: 8px;">Dammam Operations Center</h3>
+              <p class="text-white" style="font-size: 0.9rem; opacity: 0.85; max-width: 400px; margin: 0 auto 20px auto;">Building No. 8182, King Abdullah Street, Ash Shati Ash Sharqi Dist, Dammam, KSA</p>
+              <a href="https://maps.google.com/?q=Ash+Shati+Ash+Sharqi,+Dammam,+Saudi+Arabia" target="_blank" class="btn btn-outline btn-white flex-center" style="gap: 8px; font-size: 0.85rem; padding: 10px 20px;">
+                <i class="fas fa-external-link-alt"></i> View on Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- COLUMN 2: CONSULTATION FORM -->
+        <div class="reveal slide-up stagger-2">
+          <div class="glass-card" style="background: rgba(255, 255, 255, 0.9);">
+            <h2 style="margin-bottom: 15px;">Schedule Consultation</h2>
+            <p style="margin-bottom: 25px; font-size: 0.95rem;">Please submit your corporate details below. Our technical sales team will compile regulatory context and follow up immediately.</p>
+            
+            <form id="pgl-contact-form" novalidate>
+              <div class="form-row">
+                <!-- Full Name -->
+                <div class="form-group">
+                  <label for="contact-name">Full Name <span style="color: #ff3838;">*</span></label>
+                  <input type="text" id="contact-name" class="form-control" placeholder="e.g. Amjad Syed">
+                </div>
+                
+                <!-- Business Email -->
+                <div class="form-group">
+                  <label for="contact-email">Business Email <span style="color: #ff3838;">*</span></label>
+                  <input type="email" id="contact-email" class="form-control" placeholder="e.g. name@company.com">
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <!-- Telephone -->
+                <div class="form-group">
+                  <label for="contact-phone">Telephone <span style="color: #ff3838;">*</span></label>
+                  <input type="tel" id="contact-phone" class="form-control" placeholder="e.g. +966 56 315 1891">
+                </div>
+                
+                <!-- Company Name -->
+                <div class="form-group">
+                  <label for="contact-company">Company Name</label>
+                  <input type="text" id="contact-company" class="form-control" placeholder="e.g. ARRHAM Group">
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <!-- Service Selector -->
+                <div class="form-group">
+                  <label for="contact-service">Primary Service Needed <span style="color: #ff3838;">*</span></label>
+                  <select id="contact-service" class="form-control">
+                    <option value="" selected disabled>-- Select Service Area --</option>
+                    <option value="Electrical Engineering">Electrical Engineering & Systems</option>
+                    <option value="HVAC Solutions">HVAC Climate Systems</option>
+                    <option value="Fire Protection">Fire Alarm & Suppression</option>
+                    <option value="Low Current Systems">Low Current & Automation</option>
+                    <option value="UPS & Power Backup">UPS & Backup Power Redundancy</option>
+                    <option value="Data Center Fit-Out">Data Center White Space Fit-Out</option>
+                    <option value="Plumbing Work">Plumbing & Sanitary Solutions</option>
+                  </select>
+                </div>
+                
+                <!-- Project Type -->
+                <div class="form-group">
+                  <label for="contact-project-type">Project Scale / Type</label>
+                  <select id="contact-project-type" class="form-control">
+                    <option value="Commercial" selected>Commercial Office / Site</option>
+                    <option value="Industrial">Industrial Plant / Factory</option>
+                    <option value="Residential">Residential Complex / Villa</option>
+                    <option value="Infrastructure">Megaproject Infrastructure</option>
+                    <option value="Other">Other Trade Contracting</option>
+                  </select>
+                </div>
+              </div>
+              
+              <!-- Preferred Contact Method -->
+              <div class="form-group">
+                <label>Preferred Response Method</label>
+                <div class="radio-group">
+                  <label class="radio-option">
+                    <input type="radio" name="preferred-contact" value="Email" checked>
+                    <span>Email Response</span>
+                  </label>
+                  <label class="radio-option">
+                    <input type="radio" name="preferred-contact" value="Phone">
+                    <span>Phone Call</span>
+                  </label>
+                  <label class="radio-option">
+                    <input type="radio" name="preferred-contact" value="WhatsApp">
+                    <span>WhatsApp Chat</span>
+                  </label>
+                </div>
+              </div>
+              
+              <!-- Message Details -->
+              <div class="form-group">
+                <label for="contact-message">Project Specifications / Requirements <span style="color: #ff3838;">*</span></label>
+                <textarea id="contact-message" class="form-control" rows="5" placeholder="Please describe sizing, scope, civil defense requirements, and preferred timeline..."></textarea>
+              </div>
+              
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-submit">
+                <i class="far fa-paper-plane" style="margin-right: 8px;"></i> Submit Consultation Request
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Mount -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JS Scripts -->
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/contact.js"></script>
+</body>
+</html>

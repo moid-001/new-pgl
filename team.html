@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team & Leadership | Perfect Gulf Limited</title>
+  <meta name="description" content="Meet PGL's leadership and certified engineering experts in KSA, committed to executing electromechanical and data center installations with integrity.">
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Team Card Details styling */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .team-card {
+      background: var(--white);
+      border: 1px solid var(--border-gray);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      padding: 30px 20px;
+      transition: var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--light-blue);
+    }
+
+    .team-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(1, 101, 174, 0.1), rgba(115, 181, 47, 0.1));
+      border: 3px solid var(--border-gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: var(--dark-blue);
+      margin-bottom: 20px;
+      transition: var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .team-card:hover .team-avatar {
+      border-color: var(--light-blue);
+      background: linear-gradient(135deg, var(--light-blue), var(--primary-green));
+      color: var(--white);
+      transform: scale(1.05);
+    }
+
+    .team-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 5px;
+      color: var(--dark-blue);
+    }
+
+    .team-role {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary-green);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .team-bio {
+      font-size: 0.85rem;
+      color: var(--light-text);
+      line-height: 1.5;
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+
+    .team-tags {
+      margin-bottom: 20px;
+    }
+
+    .team-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      background-color: var(--light-gray);
+      color: var(--light-text);
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin: 2px;
+    }
+
+    .team-socials {
+      display: flex;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .team-social {
+      color: var(--light-text);
+      font-size: 0.9rem;
+      transition: var(--transition-fast);
+    }
+
+    .team-social:hover {
+      color: var(--light-blue);
+    }
+
+    /* Culture Values Style */
+    .value-card {
+      background: var(--white);
+      border: 1px solid var(--border-gray);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      transition: var(--transition-normal);
+    }
+
+    .value-card:hover {
+      border-color: var(--primary-green);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .value-icon {
+      font-size: 2rem;
+      color: var(--primary-green);
+      margin-bottom: 15px;
+    }
+
+    .value-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--dark-blue);
+    }
+
+    .value-card p {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: var(--light-text);
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dynamic Header Navigation Mount -->
+  <div id="header-placeholder"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-content reveal fade-in">
+      <div class="breadcrumbs">
+        <a href="./index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">Team</span>
+      </div>
+      <h1 style="margin-top: 10px;">Meet Our Team</h1>
+      <p>The certified electromechanical engineers, HVAC mechanics, and IT specialists driving PGL's regional success.</p>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP & TEAM SECTIONS -->
+  <section class="section">
+    <div class="container">
+      
+      <div class="text-center reveal slide-up" style="margin-bottom: 55px;">
+        <h2 class="center-align">Leadership & Engineering</h2>
+        <p style="max-width: 600px; margin: 15px auto 0 auto;">Our crew combines regional regulatory knowledge with global design resources backed by the ARRHAM Group.</p>
+      </div>
+
+      <!-- Team Grid list -->
+      <div class="team-grid">
+        
+        <!-- 1. Amjad Syed -->
+        <div class="team-card reveal slide-up stagger-1">
+          <div class="team-avatar">AS</div>
+          <h3>Mr. Amjad Syed</h3>
+          <div class="team-role">Director of Operations & Projects</div>
+          <p class="team-bio">Coordinating B2B client communications, municipal code approvals, and leading multi-trade fit-out execution timelines across KSA.</p>
+          <div class="team-tags">
+            <span class="team-tag">Project Lead</span>
+            <span class="team-tag">Client Support</span>
+            <span class="team-tag">Municipality Liaison</span>
+          </div>
+          <div class="team-socials">
+            <a href="#" class="team-social" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="team-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- 2. Electrical Lead -->
+        <div class="team-card reveal slide-up stagger-2">
+          <div class="team-avatar">EK</div>
+          <h3>Engr. Khalil Al-Harbi</h3>
+          <div class="team-role">Chief Electrical Engineer</div>
+          <p class="team-bio">Drafting single-line diagrams, performing cooling load flow calculations, and supervising high-voltage substation rigging operations.</p>
+          <div class="team-tags">
+            <span class="team-tag">SBC Compliance</span>
+            <span class="team-tag">MV/LV Grids</span>
+            <span class="team-tag">IEEE Certified</span>
+          </div>
+          <div class="team-socials">
+            <a href="#" class="team-social" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="team-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- 3. HVAC Lead -->
+        <div class="team-card reveal slide-up stagger-3">
+          <div class="team-avatar">EF</div>
+          <h3>Engr. Faisal Malik</h3>
+          <div class="team-role">Senior HVAC Specialist</div>
+          <p class="team-bio">Leading duct networks layouts, chillers load modeling, heat-load simulation, and VRF thermal split deployments.</p>
+          <div class="team-tags">
+            <span class="team-tag">Thermal Loads</span>
+            <span class="team-tag">VRF Networks</span>
+            <span class="team-tag">Chillers Rigging</span>
+          </div>
+          <div class="team-socials">
+            <a href="#" class="team-social" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="team-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- 4. IT / Data Center Lead -->
+        <div class="team-card reveal slide-up stagger-4">
+          <div class="team-avatar">ES</div>
+          <h3>Engr. Selim Rahman</h3>
+          <div class="team-role">Chief IT Architect</div>
+          <p class="team-bio">Leading white-space server containment layouts, raised technical flooring alignment, and 10Gbps structured cabling designs.</p>
+          <div class="team-tags">
+            <span class="team-tag">Data Centers</span>
+            <span class="team-tag">BMS Control</span>
+            <span class="team-tag">Fiber Runways</span>
+          </div>
+          <div class="team-socials">
+            <a href="#" class="team-social" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="team-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM CULTURE & CORE VALUES -->
+  <section class="section section-bg" style="border-top: 1px solid var(--border-gray);">
+    <div class="container">
+      <div class="text-center reveal slide-up" style="margin-bottom: 55px;">
+        <h2 class="center-align">Our Corporate Values</h2>
+        <p style="max-width: 600px; margin: 15px auto 0 auto;">PGL's execution quality is anchored by our shared operating ethics.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Value 1 -->
+        <div class="value-card reveal slide-up stagger-1">
+          <div class="value-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Innovation & Excellence</h3>
+          <p>We actively import state-of-the-art designs and Western standard techniques via ARRHAM Group to solve complex structural constraints.</p>
+        </div>
+
+        <!-- Value 2 -->
+        <div class="value-card reveal slide-up stagger-2">
+          <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Safety First</h3>
+          <p>Rigorous, uncompromised compliance. PGL enforces absolute safety boundaries during high-load panel wiring or heavy chillers rigging.</p>
+        </div>
+
+        <!-- Value 3 -->
+        <div class="value-card reveal slide-up stagger-3">
+          <div class="value-icon"><i class="fas fa-user-tie"></i></div>
+          <h3>Client-Centric Focus</h3>
+          <p>We work coordinates with B2B operators to establish detailed project shifts, avoiding physical interruptions to daily trades.</p>
+        </div>
+
+        <!-- Value 4 -->
+        <div class="value-card reveal slide-up stagger-1">
+          <div class="value-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Continuous Learning</h3>
+          <p>Our engineers undergo constant professional upgrades, staying ahead of standard municipal revisions and new NFPA protocols.</p>
+        </div>
+
+        <!-- Value 5 -->
+        <div class="value-card reveal slide-up stagger-2">
+          <div class="value-icon"><i class="fas fa-balance-scale"></i></div>
+          <h3>Integrity & Compliance</h3>
+          <p>Fully licensed under active KSA Commercial Registration (CR: 7043560932), PGL performs operations with complete legal and corporate honesty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA ACTION SECTION -->
+  <section class="section text-white" style="background: linear-gradient(135deg, var(--dark-blue), var(--medium-blue)); position: relative; overflow: hidden;">
+    <div class="container text-center reveal slide-up" style="position: relative; z-index: 2; max-width: 800px;">
+      <h2 class="text-white center-align" style="margin-bottom: 15px;">Want to Consult Our Engineering Leads?</h2>
+      <p style="color: rgba(255,255,255,0.85); font-size: 1.15rem; margin-bottom: 35px;">Our experts are ready to evaluate your architectural briefs and deliver optimized solutions.</p>
+      <div class="flex flex-center" style="gap: 15px; flex-wrap: wrap;">
+        <a href="./contact.html" class="btn btn-secondary">Request Consultation Meeting</a>
+        <a href="https://wa.me/966563151891" target="_blank" class="btn btn-outline btn-white"><i class="fab fa-whatsapp"></i> Chat Live on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Mount -->
+  <div id="header-placeholder"></div>
+  <div id="footer-placeholder"></div>
+
+  <!-- JS Scripts -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

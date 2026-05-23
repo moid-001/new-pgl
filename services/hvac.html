@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HVAC & Climate Solutions | Perfect Gulf Limited</title>
+  <meta name="description" content="Premium commercial HVAC, chillers, VRF systems, and custom duct installations in Saudi Arabia. ASHRAE and SBC 501 compliant engineering.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Inner Detail Page Styling */
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 2.2fr 1fr;
+      gap: 40px;
+    }
+
+    @media (max-width: 992px) {
+      .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    .sidebar-card {
+      background: var(--light-gray);
+      border: 1px solid var(--border-gray);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      position: sticky;
+      top: 100px;
+    }
+
+    .sidebar-section {
+      margin-bottom: 25px;
+    }
+
+    .sidebar-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .sidebar-title {
+      font-size: 1.1rem;
+      color: var(--dark-blue);
+      margin-bottom: 15px;
+      border-bottom: 2px solid var(--primary-green);
+      padding-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      margin-bottom: 25px;
+      font-size: 0.92rem;
+    }
+
+    .spec-table th, .spec-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid var(--border-gray);
+      text-align: left;
+    }
+
+    .spec-table th {
+      background-color: var(--light-gray);
+      color: var(--dark-blue);
+      font-weight: 600;
+    }
+
+    .bullet-list {
+      margin-left: 20px;
+      margin-bottom: 20px;
+      list-style-type: square;
+    }
+
+    .bullet-list li {
+      margin-bottom: 10px;
+      color: var(--light-text);
+    }
+
+    /* Accordion Style */
+    details {
+      background: var(--white);
+      border: 1px solid var(--border-gray);
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: var(--transition-normal);
+    }
+
+    details[open] {
+      border-color: var(--light-blue);
+    }
+
+    summary {
+      padding: 15px 20px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      outline: none;
+    }
+
+    summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      color: var(--light-blue);
+    }
+
+    details[open] summary::after {
+      content: '−';
+    }
+
+    .faq-content {
+      padding: 15px 20px;
+      background-color: var(--light-gray);
+      border-top: 1px solid var(--border-gray);
+      color: var(--light-text);
+      font-size: 0.92rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dynamic Header Navigation Mount -->
+  <div id="header-placeholder"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container page-hero-content reveal fade-in">
+      <div class="breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span class="separator">/</span>
+        <a href="../services.html">Services</a>
+        <span class="separator">/</span>
+        <span class="current">HVAC Solutions</span>
+      </div>
+      <h1 style="margin-top: 10px;">HVAC & Climate Solutions</h1>
+      <p>Precision indoor thermal conditioning, chillers, VRF networks, and ventilation matching SBC 501 and ASHRAE.</p>
+    </div>
+  </section>
+
+  <!-- CONTENT SECTION -->
+  <section class="section">
+    <div class="container">
+      
+      <div class="detail-grid">
+        
+        <!-- MAIN CONTENT COLUMN -->
+        <div class="reveal slide-up stagger-1">
+          <h2 style="margin-bottom: 20px;">HVAC Solutions</h2>
+          <p>We deliver complete HVAC solutions designed for comfort, efficiency, and performance in both commercial and residential environments. From system design to final installation, our expertise ensures optimized indoor climate control, improved air quality, and reduced energy consumption.</p>
+          <p>Our experts generate tailored HVAC systems based on building size, usage patterns, occupancy levels, and environmental factors. With a focus on smart technologies and long term reliability, we help clients achieve ideal temperature control while minimizing operational costs.</p>
+          <p>Whether it's a large office building, data center, or private residence, we ensure every HVAC system is built to meet functional needs, aesthetic preferences, and applicable codes.</p>
+          
+          <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 1.3rem;"><i class="fas fa-building text-blue" style="margin-right: 8px;"></i> Commercial HVAC Solutions</h3>
+          <ul class="bullet-list">
+            <li><strong>Custom HVAC System Design:</strong> Specialized for offices, retail centers, data centers, and industrial buildings.</li>
+            <li><strong>In-Row & Precision Cooling for Data Centers:</strong> Ensuring consistent temperatures and humidity control for sensitive equipment.</li>
+            <li><strong>Smart Controls & Zoning:</strong> Automated systems for energy savings and flexible management.</li>
+            <li><strong>Chillers, AHUs, and VRF Systems:</strong> Design and installation of advanced HVAC technologies for optimal energy use.</li>
+            <li><strong>System Retrofitting & Upgrades:</strong> Modernizing outdated HVAC systems with enhanced efficiency and reduced operation costs.</li>
+          </ul>
+
+          <h3 style="margin-top: 30px; margin-bottom: 15px; font-size: 1.3rem;"><i class="fas fa-home text-green" style="margin-right: 8px;"></i> Residential HVAC Solutions</h3>
+          <ul class="bullet-list">
+            <li><strong>Personalized Climate Control:</strong> Systems designed to suit home size, layout, and family preferences.</li>
+            <li><strong>Smart Thermostats & Zoning:</strong> Automated comfort with mobile app integration and energy-saving scheduling.</li>
+            <li><strong>Air Quality & Ventilation Solutions:</strong> Improved indoor air through advanced filtration and proper airflow design.</li>
+            <li><strong>Quiet & Aesthetic Installations:</strong> Sleek systems that operate silently and blend into home design.</li>
+            <li><strong>Maintenance & Support:</strong> Ongoing support and annual servicing for peak performance and system longevity.</li>
+          </ul>
+
+          <h3 style="margin-top: 35px; margin-bottom: 15px; font-size: 1.3rem;">Technical Specifications & SBC Compliance</h3>
+          <p>Every duct joint, chiller anchor, and electrical hookup meets global conventions and KSA building rules.</p>
+          
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>Compliance Standard</th>
+                <th>Application Scope</th>
+                <th>PGL Verification Checklist</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <strong><td>SBC 501</td></strong>
+                <td>Saudi National Mechanical Code</td>
+                <td>Fresh-air intake ratios, duct fire dampers layouts, exhaust clearances.</td>
+              </tr>
+              <tr>
+                <strong><td>ASHRAE 90.1</td></strong>
+                <td>Energy Standard for Buildings</td>
+                <td>Minimum equipment EER, pipe insulation thickness, automated thermostat setbacks.</td>
+              </tr>
+              <tr>
+                <strong><td>SMACNA</td></strong>
+                <td>Duct Construction Standards</td>
+                <td>Sheet metal gauges, hanger spacing, joint sealing and leakage tests.</td>
+              </tr>
+              <tr>
+                <strong><td>ASHRAE 62.1</td></strong>
+                <td>Indoor Air Quality (IAQ)</td>
+                <td>Filters rating (MERV), ventilation air volume, condensation drainage.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 style="margin-top: 40px; margin-bottom: 25px;">Service-Specific FAQs</h2>
+          <div>
+            <details>
+              <summary>Do you perform cooling load calculations before recommending equipment?</summary>
+              <div class="faq-content">
+                Yes. We perform comprehensive thermal analyses using Carrier's Hourly Analysis Program (HAP) to determine the exact peak BTU cooling demand, factoring in wall insulation values, glass solar gain, lighting load, and expected human occupancy.
+              </div>
+            </details>
+            
+            <details>
+              <summary>Are your duct installations compliant with SMACNA?</summary>
+              <div class="faq-content">
+                Absolutely. All supply, return, and exhaust duct networks are fabricated in our facility or on-site to match SMACNA specifications. We perform physical smoke or light pressure leak-testing on all seams before insulation.
+              </div>
+            </details>
+
+            <details>
+              <summary>Can you integrate HVAC equipment with existing Building Management Systems?</summary>
+              <div class="faq-content">
+                Yes. We integrate all HVAC chillers, VRF panels, and AHUs directly with central Building Management Systems (BMS) using open industry protocols like BACnet, Modbus, or LonWorks.
+              </div>
+            </details>
+          </div>
+        </div>
+        
+        <!-- SIDEBAR COLUMN -->
+        <div class="reveal slide-up stagger-2">
+          <div class="sidebar-card">
+            
+            <div class="sidebar-section">
+              <h4 class="sidebar-title">B2B Core Details</h4>
+              <ul style="font-size: 0.9rem; color: var(--light-text); display: flex; flex-direction: column; gap: 12px;">
+                <li><i class="fas fa-certificate text-blue" style="margin-right: 8px;"></i> <strong>Compliance:</strong> SBC 501, ASHRAE, SMACNA</li>
+                <li><i class="fas fa-tools text-blue" style="margin-right: 8px;"></i> <strong>Key Systems:</strong> Chillers, VRF, AHUs</li>
+                <li><i class="fas fa-leaf text-blue" style="margin-right: 8px;"></i> <strong>Efficiency:</strong> High EER / Green Refrigerants</li>
+                <li><i class="fas fa-clock text-blue" style="margin-right: 8px;"></i> <strong>Lead Time:</strong> Site inspection in 48h</li>
+              </ul>
+            </div>
+
+            <div class="sidebar-section" style="margin-top: 30px;">
+              <h4 class="sidebar-title">Explore Other Services</h4>
+              <ul class="footer-links" style="display: flex; flex-direction: column; gap: 10px;">
+                <li><a href="electrical.html">Electrical Systems</a></li>
+                <li><a href="fire-alarm.html">Fire Alarm & Suppression</a></li>
+                <li><a href="low-current.html">Low Current Automation</a></li>
+                <li><a href="ups.html">UPS & Power Backup</a></li>
+                <li><a href="data-center.html">Data Center Fit-Out</a></li>
+                <li><a href="plumbing.html">Plumbing Work</a></li>
+              </ul>
+            </div>
+
+            <div class="sidebar-section" style="margin-top: 30px;">
+              <a href="../contact.html" class="btn btn-primary" style="width: 100%; font-size: 0.9rem; padding: 12px 0;">Request Consultation</a>
+              <a href="https://wa.me/966563151891" target="_blank" class="btn btn-secondary" style="width: 100%; font-size: 0.9rem; padding: 12px 0; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <i class="fab fa-whatsapp"></i> Chat Live on WhatsApp
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Dynamic Footer Mount -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JS Scripts -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
