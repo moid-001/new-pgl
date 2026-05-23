@@ -635,7 +635,19 @@ footer {
   font-weight: 500;
 }
 
-/* 9. RESPONSIVE BREAKPOINTS */
+/* 9. SIDEBAR & UTILITIES OVERRIDES */
+.sidebar-card .footer-links a {
+  color: var(--light-text) !important;
+  font-weight: 500;
+  transition: var(--transition-normal);
+}
+
+.sidebar-card .footer-links a:hover {
+  color: var(--light-blue) !important;
+  padding-left: 5px;
+}
+
+/* 10. RESPONSIVE BREAKPOINTS */
 @media (max-width: 1024px) {
   .footer-top {
     grid-template-columns: 1fr 1fr;

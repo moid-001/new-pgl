@@ -20,13 +20,16 @@
       position: relative;
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, var(--dark-gradient-start), var(--dark-gradient-end));
       overflow: hidden;
       text-align: center;
       border-bottom: 5px solid var(--primary-green);
-      padding-top: 80px;
+      padding-top: 105px; /* Ensures spacious margin from the header and zero overlapping on tabs */
+      padding-bottom: 25px;
+      box-sizing: border-box;
     }
     
     .home-hero-bg {
@@ -56,20 +59,22 @@
       align-items: center;
     }
 
-    /* Banner image — scaled and optimized for perfect above-the-fold display */
+    /* Banner image — 100% viewport width, fixed height, edge-to-edge filled */
     .hero-banner-img {
       width: 100%;
-      max-width: 880px;
-      margin: 12px 0 22px 0;
-      border-radius: 14px;
+      height: 350px; /* Stay fixed height, do not make it taller */
+      margin: 15px 0 25px 0;
       overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-      border: 2px solid rgba(115, 181, 47, 0.4);
+      box-shadow: 0 10px 45px rgba(0, 0, 0, 0.4);
+      border-top: 3.5px solid var(--primary-green);
+      border-bottom: 3.5px solid var(--light-blue);
+      z-index: 2;
     }
 
     .hero-banner-img img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover; /* Fills the entire space horizontally and vertically without distortion */
       display: block;
     }
 
@@ -81,18 +86,19 @@
 
     .home-hero h1 {
       color: var(--white);
-      margin-bottom: 20px;
+      margin-bottom: 12px;
       text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: 800;
+      font-size: clamp(1.6rem, 3.8vw, 2.3rem);
     }
 
     .home-hero p {
       color: rgba(255, 255, 255, 0.85);
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-size: clamp(0.92rem, 2vw, 1.15rem);
       max-width: 750px;
-      margin: 0 auto 25px auto;
-      line-height: 1.5;
+      margin: 0 auto 20px auto;
+      line-height: 1.4;
     }
 
     .hero-cta {
@@ -225,11 +231,12 @@
     <div class="glowing-orb orb-1"></div>
     <div class="glowing-orb orb-2"></div>
     
+    <!-- PGL BANNER IMAGE — stretched sideways, lifted up, perfectly centered sibling -->
+    <div class="hero-banner-img reveal slide-up">
+      <img src="./assets/images/banner.png" alt="Perfect Gulf Limited - Engineering Excellence. Powering Progress.">
+    </div>
+
     <div class="home-hero-content reveal fade-in">
-      <!-- PGL BANNER IMAGE — stretched sideways, lifted up -->
-      <div class="hero-banner-img reveal slide-up">
-        <img src="./assets/images/banner.png" alt="Perfect Gulf Limited - Engineering Excellence. Powering Progress.">
-      </div>
       <!-- TAGLINE & CTA BELOW THE BANNER -->
       <div class="hero-text-block">
         <h1>Where Innovation Meets Execution</h1>
@@ -330,7 +337,7 @@
         <!-- 6. Data Center -->
         <div class="glass-card reveal slide-up stagger-3">
           <div style="font-size: 2.5rem; color: #00d2d3; margin-bottom: 20px;"><i class="fas fa-server"></i></div>
-          <h3 style="margin-bottom: 12px;">Data Center Fit-Out</h3>
+          <h3 style="margin-bottom: 12px;">Data Center Fit-Out &amp; Cleaning</h3>
           <p>Comprehensive white space layouts, high-load server containment, cold/hot aisles configurations, raised access flooring, and fiber runways.</p>
           <a href="./services/data-center.html" style="font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; margin-top: 10px;">
             Learn More <i class="fas fa-arrow-right"></i>
