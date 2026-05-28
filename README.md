@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently working on website development<br>🌱 I’m currently learning Data Science<br>⚡ Fun fact I am lazy lol
+🔭 I’m currently working on website development<br>🌱 I’m currently learning Data Science<br>⚡ Fun fact I am lazy lol3
 
 
 ## 🌐 Socials:
